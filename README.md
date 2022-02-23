@@ -1,6 +1,6 @@
 # Proyecto integrador (e-commerce) 
 
-### Integrantes:
+### Integrantess:
 <ul>
   <li>Alejandro Saucedo Enriquez</li> 
   <li>Alondra Daniela Quevedo Hernández</li> 
