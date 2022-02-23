@@ -2,7 +2,7 @@
 
 ### Integrantes:
 <ul>
-  <li>Alejandro Saucedo Enríquez</li> 
+  <li>Alejandro Saucedo Enriquez</li> 
   <li>Alondra Daniela Quevedo Hernández</li> 
   <li>Eduardo Gómez Pineda</li> 
   <li>David Ramírez Espinoza</li> 
