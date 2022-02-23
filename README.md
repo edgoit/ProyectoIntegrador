@@ -12,4 +12,4 @@
   <li>Susan Angelica Mundo Galicia</li> 
 </ul>
 -
- _Our club / tienda de tenis_
+ _Our club / tienda de tenis_ 
