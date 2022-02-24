@@ -1,8 +1,11 @@
-# Proyecto integrador (e-commerce) 
+# _Our club / tienda de tenis_  
+
+
+Proyecto integrador (e-commerce)
 
 ### Integrantes:
 <ul>
-  <li>Alejandro Saucedo Enríquez</li> 
+  <li>Alejandro Saucedo Enriquez</li> 
   <li>Alondra Daniela Quevedo Hernández</li> 
   <li>Eduardo Gómez Pineda</li> 
   <li>David Ramírez Espinoza</li> 
@@ -12,4 +15,4 @@
   <li>Susan Angelica Mundo Galicia</li> 
 </ul>
 
- _Our club / tienda de tenis_
+  
