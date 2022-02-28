@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
+
+<link rel="stylesheet" href="/src/styles/styles.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -13,53 +16,87 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">OUR CLUB</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nosotros</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-expanded="false">
-                            Categoria
-                        </a>
-                        <div class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light scrolling-navbar fixed-top">
+            <div class="container">
+                <!-- logo -->
+                <a class="navbar-brand" href="#">
+                <img src="/src/img/logo.png" height="40" class="d-inline-block align-top" alt="">
+                </a><!-- fin logo-->
+        
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                        <!--button-->
+                        <li class="nav-item dropdown">
                             
-                            <div class="btn-group dropright">
-                                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                  Dropright
+                                <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                                Categorías
                                 </button>
-                                <div class="dropdown-menu ">
-                                  <!-- Dropdown menu links -->
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                              </div>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contactanos</a>
-                    </li>
-                </ul>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Hombre</a>
+                                        <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Fútbol</a>
+                                        <a class="dropdown-item" href="#">Lifestyle</a>
+                                        <a class="dropdown-item" href="#">Running</a>
+                                        <a class="dropdown-item" href="#">Skateboarding</a>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Mujer</a>
+                                        <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Fútbol</a>
+                                        <a class="dropdown-item" href="#">Lifestyle</a>
+                                        <a class="dropdown-item" href="#">Running</a>
+                                        <a class="dropdown-item" href="#">Skateboarding</a>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Marca</a>
+                                        <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Adidas</a>
+                                        <a class="dropdown-item" href="#">Nike</a>
+                                        <a class="dropdown-item" href="#">Pirma</a>
+                                        </ul>
+                                    </li>
+                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Ayuda y configuración</a>
+                                    <ul class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Contactenos</a>
+                                    <a class="dropdown-item" href="#">Login</a>
+                                    <a class="dropdown-item" href="#">Salir</a>
+                                    </ul>
+                                </li>
+                                </ul>
+                            
+                        </li><!--button-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
+<br>
+<br>
+<br>
+<br>
+    <section class="container">
+        <h1 class="text-center">NOSOTROS</h1>
+    </section>
+
+<br>
 
     <section class="container">
         <div class="row">
             <!-- Primer sección de cards-->
+            <!-- INICIO CARD 1 ALEJANDRO-->
             <div class="col-md-5 mb-5">
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
@@ -82,33 +119,36 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><!--FIN CARD 1 ALEJANDRO-->
+            <!-- INICIO CARD 2 ALONDRA-->
             <div class="col-md-5 mb-5 offset-md-1">
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src="https://picsum.photos/150" alt="...">
+                        <div class="col-md-4 center">
+                            <img src="./src/img/Alondra.jpg" alt="imagen de Alondra" class="img-fluid">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5 class="card-title">Nombre</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                
-                                <i class="bi bi-linkedin"></i>
-
-                                <i class="bi bi-github"></i>
-
-                                <i class="bi bi-envelope-fill"></i>
+                                <h5 class="card-title">Alondra Daniela Quevedo Hernández</h5>
+                                <p class="card-text">Soy egresada de la Universidad de Guadalajara en la carrera de Ingeniería en Comunicaciones y Electrónica.
+                                    Desarrollador Java FullStack.
+                                </p>
+                                <p class="card-text"><small class="text-muted">Product Owner</small></p>
+                                <!-- Icono LinkedIn -->
+                                <a target="_blank" href="https://www.linkedin.com/in/alondra-daniela-quevedo-hernandez/"><i class="bi bi-linkedin"></i></a>
+                                <!-- Icono GitHub -->
+                                <a target="_blank" href="https://github.com/AlondraQuevedo"><i class="bi bi-github"></i></a>
+                                <!-- Icono Mail -->
+                                <a target="_blank" href="mailto:danielaquevedohdez@gmail.com"><i class="bi bi-envelope-fill"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div><!-- Fin de primer sección de cards-->
         <div class="row">
-            <!-- Primer sección de cards-->
+            <!-- Segunda sección de cards-->
+            <!-- INICIO CARD 3 EDUARDO-->
             <div class="col-md-5 mb-5">
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
@@ -132,7 +172,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><!-- FIN CARD 3 EDUARDO-->
+            <!-- INICIO CARD 4 DAVID-->
             <div class="col-md-5 mb-5 offset-md-1">
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
@@ -155,10 +196,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div><!-- FIN CARD 4 DAVID-->
+        </div><!-- Fin de segunda sección de cards-->
         <div class="row">
-            <!-- Primer sección de cards-->
+            <!-- Tercer sección de cards-->
+            <!-- INICIO CARD 5 ITZEL-->
             <div class="col-md-5 mb-5">
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
@@ -182,7 +224,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><!-- INICIO CARD 5 ITZEL-->
+            <!-- INICIO CARD 6 LEONEL-->
             <div class="col-md-5 mb-5 offset-md-1">
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
@@ -205,11 +248,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div><!-- FIN CARD 6 LEONEL-->
+        </div><!-- Fin de stercer sección de cards-->
         <div class="row">
-            <!-- Primer sección de cards-->
+            <!-- Cuarta sección de cards-->
             <div class="col-md-5 mb-5">
+                <!-- INICIO CARD 7 MARCO-->
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -231,9 +275,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><!-- FIN CARD 7 MARCO-->
             </div>
             <div class="col-md-5 mb-5 offset-md-1">
+                <!-- INICIO CARD 8 SUSAN-->
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -254,9 +299,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> <!-- FIN CARD 8 SUSAN-->
             </div>
-        </div>
+        </div><!-- Fin de cuarta sección de cards-->
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
