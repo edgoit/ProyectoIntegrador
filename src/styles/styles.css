@@ -14,3 +14,22 @@
     margin-top: -30px;
     left: 100%;
 }
+/*Quita los bordes de la card*/
+
+.card
+{
+    border-style: none;
+}
+/*Da el borde curvo y un ancho de 160px*/
+img
+{
+    border-radius: 50%;
+    width: 160px;
+}
+/*Da un margin auto para centrar verticalmente y un text-align para alinear horizontalmente*/
+.center
+{
+    margin: auto;
+    text-align: center;
+}
+
