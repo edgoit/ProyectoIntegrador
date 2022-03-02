@@ -14,18 +14,62 @@
     margin-top: -30px;
     left: 100%;
 }
-/*Quita los bordes de la card*/
 
+body
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar
+{
+    background-color: transparent !important;
+}
+
+.about-text
+{
+    background-color: #B5FFFC;
+
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, 
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, 
+    rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    
+}
+
+/*Quita los bordes de la card*/
 .card
+{
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.3px);
+    -webkit-backdrop-filter: blur(5.3px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.backgroundCard
+{
+
+}
+
+
+.footer , .card
 {
     border-style: none;
 }
+
 /*Da el borde curvo y un ancho de 160px*/
-img
+.about-img
 {
+    width: 150px;
+    height: 150px;
     max-width: 160px;
     border-radius: 50%;
 }
+
 /*Da un margin auto para centrar verticalmente y un text-align para alinear horizontalmente*/
 .center
 {
@@ -34,7 +78,7 @@ img
 }
 
 
-span
+.scrum
 {
     display: block;
     font-family: monospace;
@@ -53,7 +97,5 @@ span
 }
 @keyframes blink
 {
-    50% {border-color: transparent;}
+    50%{border-color: transparent;}
 }
-
-
