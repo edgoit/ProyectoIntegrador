@@ -13,6 +13,7 @@ Proyecto integrador (e-commerce)
   <li>Leonel Álvarez García</li> 
   <li>Marco Antonio Mayen Palmillas</li> 
   <li>Susan Angelica Mundo Galicia</li> 
+  
 </ul>
 
   
