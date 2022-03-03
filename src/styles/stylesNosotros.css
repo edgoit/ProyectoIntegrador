@@ -27,6 +27,23 @@ body
     background-color: transparent !important;
 }
 
+.jumbotron 
+{
+    background-image: url("../img/");
+    background-position: 0% 25%;
+    background-size: cover;
+    padding-top: 65vh;
+}
+
+#arrow
+{
+    font-size: 30px;
+    color: white;
+}
+
+/*
+   ============> Sombra del jumbotron
+*/
 .about-text
 {
     background-color: #B5FFFC;
@@ -50,11 +67,6 @@ body
 }
 
 
-.backgroundCard
-{
-
-}
-
 
 .footer , .card
 {
@@ -77,6 +89,14 @@ body
     text-align: center;
 }
 
+footer
+{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, 
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, 
+    rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    background: rgb(18,7,48);
+    background: linear-gradient(164deg, rgb(15, 8, 36) 25%, rgb(35, 27, 53) 100%); 
+}
 
 .scrum
 {
