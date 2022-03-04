@@ -1,3 +1,6 @@
+/*
+    * Funcion del dropdown
+*/
 .dropdown-submenu{
     position: relative;
 }
@@ -14,25 +17,38 @@
     margin-top: -30px;
     left: 100%;
 }
-
+/*
+   ============> Estilos del body
+*/
 body
 {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 500;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 85%, rgba(213,212,212,1) 100%); 
 }
 
+
+html
+{
+    scroll-behavior: smooth;
+}
+/*
+   ============> Vuelve tranparente la navbar y la pone enfrente del jumbotron
+*/
 .navbar
 {
     background-color: transparent !important;
+    position: absolute;
 }
 
 .jumbotron 
 {
-    background-image: url("../img/");
+    background-image: url("../img/bg_jt.jpg");
     background-position: 0% 25%;
     background-size: cover;
-    padding-top: 65vh;
+    padding-top: 50vh;
 }
 
 #arrow
@@ -46,58 +62,66 @@ body
 */
 .about-text
 {
-    background-color: #B5FFFC;
-
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, 
     rgba(17, 17, 26, 0.1) 0px 8px 24px, 
     rgba(17, 17, 26, 0.1) 0px 16px 56px;
-    
+    color:white;
 }
 
-/*Quita los bordes de la card*/
+/*
+   ============> Estilos de las cards
+*/
 .card
 {
+    border-style: none;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.28);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.3px);
-    -webkit-backdrop-filter: blur(5.3px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+/*
+   ============> Delimita el tamaño de las imagenes y da bordes
+*/
 
-
-.footer , .card
-{
-    border-style: none;
-}
-
-/*Da el borde curvo y un ancho de 160px*/
 .about-img
 {
     width: 150px;
     height: 150px;
-    max-width: 160px;
     border-radius: 50%;
 }
 
-/*Da un margin auto para centrar verticalmente y un text-align para alinear horizontalmente*/
+.us-text
+{
+    font-size: 13vw;
+    font-weight: 800;
+    backdrop-filter: blur(5px);
+    color: rgba(255, 255, 255, 0.589);
+}
+/*
+   ============> Da un margin auto para centrar verticalmente y un text-align para alinear horizontalmente
+*/
 .center
 {
     margin: auto;
     text-align: center;
 }
+/*
+   ============> Animación typing puestos
+*/
 
 footer
 {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, 
     rgba(17, 17, 26, 0.1) 0px 8px 24px, 
     rgba(17, 17, 26, 0.1) 0px 16px 56px;
-    background: rgb(18,7,48);
-    background: linear-gradient(164deg, rgb(15, 8, 36) 25%, rgb(35, 27, 53) 100%); 
+    background-color: rgb(25, 29, 46);
 }
 
+/*Scrum-team*/
 .scrum
 {
     display: block;
@@ -105,12 +129,38 @@ footer
     white-space: nowrap;
     border-right: 1px solid;
     width: 10ch;
+    
+    animation: typing 4s steps(10),
+    blink .5s infinite forwards step-end;
+    overflow: hidden;
+}
+
+/*Product-Owner*/
+.pro-owner
+{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 1px solid;
+    width: 13ch;
 
     animation: typing 4s steps(10),
     blink .5s infinite forwards step-end;
     overflow: hidden;
 }
 
+.scr-master
+{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 1px solid;
+    width: 12ch;
+
+    animation: typing 4s steps(10),
+    blink .5s infinite forwards step-end;
+    overflow: hidden;
+}
 @keyframes typing
 {
     from{width: 0;}
