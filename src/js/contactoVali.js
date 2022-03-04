@@ -140,7 +140,7 @@ function enviar_formulario(f) {
             confirmButtonText: 'continuar',
             confirmButtonColor: 'black'
         });
-
+        
     }
 
     }, 3000);
