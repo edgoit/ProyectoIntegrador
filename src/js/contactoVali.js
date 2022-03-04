@@ -134,11 +134,11 @@ function enviar_formulario(f) {
     }else{
             // mensaje que dice que el formulario se envio correctamente 
         Swal.fire({
+            icon: 'success', 
             title: 'Exito',
-            text: 'Se guardo tu informacion de contacto',
-            icon: 'success',
+            html: "<form action=\"mailto:ourclub.alpha@gmail.com?subject=form-registro-date%20pag%20Web\" method=\"post\" enctype=\"text/plain\"><input type=\"submit\" value=\"Enviar email\"></form>",
             confirmButtonText: 'continuar',
-            confirmButtonColor: 'black'
+            confirmButtonColor: 'black' 
         });
         
     }
