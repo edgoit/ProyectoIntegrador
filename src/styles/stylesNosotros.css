@@ -118,8 +118,27 @@ footer
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, 
     rgba(17, 17, 26, 0.1) 0px 8px 24px, 
     rgba(17, 17, 26, 0.1) 0px 16px 56px;
-    background-color: rgb(25, 29, 46);
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: white;
 }
+
+
+
+.ico-footer{
+    padding-right: 1vw;
+    font-size: 25px;
+    color: white;
+}
+
+.fot-cat{
+    text-decoration: none;
+    color: white;
+}
+
+
 
 /*Scrum-team*/
 .scrum
