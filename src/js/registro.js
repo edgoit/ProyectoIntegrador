@@ -1,20 +1,23 @@
-//Agregamos Datos desde contacto.html con ById a contactoVali.js
+//Agregamos Datos desde contacto.html con ById a registro.js
 const formulario = document.getElementById("form-registro-date");
 const btnReset = document.getElementById("resetBtn");
 const btnEnviar = document.querySelector("#enviar");
 
-// expresiones regulares para  validar nombre, email, telefono, y mensaje
+// expresiones regulares para  validar nombre, email, telefono, y contraseña
 const ern = /[a-zA-Z]/;
 const er = /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
 const ert = /^([0-9]{5})+((-{1})*)+([0-9]{5})$/i;
-const erm = /^[a-zA-Z0-9?$@#()'!,+\-=_:.&€£*%\sÑñáéíóúÁÉÍÓÚ]+$/;
+const erc=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,20}$/;
 
 
 //Declaramos variables que lleva el formulario 
 let nombre = document.getElementById("nombre");
 let email = document.getElementById("email");
 let telefono = document.getElementById("telefono");
-let mensaje = document.getElementById("mensaje");
+let contraseña = document.getElementById("contraseña");
+let contraseña2 = document.getElementById("contraseña2");
+let comparacion = false;
+
 
 // se manda llamar la funcion evenListener
 eventListener();
@@ -27,7 +30,8 @@ function eventListener() {
     nombre.addEventListener("blur", validacionFormNombre);
     email.addEventListener("blur", validacionFormEmail);
     telefono.addEventListener("blur", validacionFormTelefono);
-    mensaje.addEventListener("blur", validacionFormMensaje);
+    contraseña.addEventListener("blur", validacionFormContraseña);
+    contraseña2.addEventListener("blur", validacionFormContraseña2);
     //enviar formulario
     formulario.addEventListener("submit", enviar_formulario);
 }
@@ -89,21 +93,64 @@ function validacionFormTelefono(t) {
 
 
 
-// Funcion validacionFormMensaje donde pasa el foco de verde si hay datos en el textarea mensaje o rojo  si no hay datos 
-function validacionFormMensaje(m) {
-    if (m.target.type === "textarea") {
+// Funcion validacionFormContraseña donde pasa el foco de verde si hay datos en el input telefono o rojo  si no hay datos 
+function validacionFormContraseña(c) {
+    if (c.target.type === "password") {
 
-        if (m.target.value) {
-            m.target.classList.remove("is-invalid");
-            m.target.classList.add("is-valid");
+        if (erc.test(c.target.value)) {
+            
+            c.target.classList.remove("is-invalid");
+            c.target.classList.add("is-valid");
         } else {
-            //mostrarError("El email no es valido");
-            m.target.classList.remove("is-valid");
-            m.target.classList.add("is-invalid");
+            //mostrarError
+
+            c.target.classList.remove("is-valid");
+            c.target.classList.add("is-invalid");
 
         }
 
     }
+}
+
+// Funcion validacionFormContraseña2 donde pasa el foco de verde si hay datos en el input telefono o rojo  si no hay datos 
+function validacionFormContraseña2(c2) {
+    if (c2.target.type === "password") {
+
+        if (erc.test(c2.target.value)) {
+            
+            c2.target.classList.remove("is-invalid");
+            c2.target.classList.add("is-valid");
+        } else {
+            //mostrarError
+
+            c2.target.classList.remove("is-valid");
+            c2.target.classList.add("is-invalid");
+
+        }
+
+    }
+}
+
+
+//Función que compara si las contraseñas ingresadas coinciden
+function validarRegistro(){
+    var password = document.querySelector("#contraseña").value;
+    var password2 = document.querySelector("#contraseña2").value;
+    //console.log("contraseña", password);
+    //console.log("contraseña2", password2);
+    if (password != password2) {
+        comparacion = false;
+       //console.log("No son iguales", comparacion);
+        return false;
+    }else {
+        
+        comparacion = true;
+        //console.log("son iguales" , comparacion);
+        return true;
+
+    }
+
+
 }
 
 
@@ -119,24 +166,21 @@ function enviar_formulario(f) {
         spinner.style.display = "none";
        let valorNombre = ern.test(nombre.value);
        let valorTelefono = ert.test(telefono.value);
-       let valorMensaje = erm.test(mensaje.value);
 
-        if(valorNombre == "" || valorTelefono == "" || valorMensaje == ""){
-       console.log(valorNombre);
-        // mensaje que dice que la informacion de contacto tiene errores
+        if(valorNombre == "" || valorTelefono == "" || comparacion == false){
+        // mensaje que dice que la informacion de registro tiene errores
         Swal.fire({
             title: 'Error',
-            text: 'La informacion de contacto tiene errores',
+            text: 'La informacion de registro contiene errores o las contraseñas con coinciden',
             icon: 'Danger',
             confirmButtonText: 'continuar',
             confirmButtonColor: 'black'
         });
     }else{
-            // mensaje que dice que el formulario se envio correctamente 
+            // mensaje que dice que el registro se hizo correctamente correctamente 
         Swal.fire({
             icon: 'success', 
-            title: 'Exito',
-            html: "<form action=\"mailto:ourclub.alpha@gmail.com?subject=form-registro-date%20pag%20Web\" method=\"post\" enctype=\"text/plain\"><input type=\"submit\" value=\"Enviar email\"></form>",
+            title: 'Registro exitoso',
             confirmButtonText: 'continuar',
             confirmButtonColor: 'black' 
         });
@@ -148,17 +192,13 @@ function enviar_formulario(f) {
 }
 
 
+
 //Reinicia el formulario 
 formulario.addEventListener("reset", (e) => {
     e.preventDefault();
     nombre.value = "";
     email.value = "";
     telefono.value = "";
-    mensaje.value = "";
+    contraseña.value = "";
+    contraseña2.value = "";
 });
-
-
-
-
-
-
