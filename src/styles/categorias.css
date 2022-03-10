@@ -1,0 +1,14 @@
+/*Se quita borde de dropdown al hacer hover */
+#btnGroupDrop1:focus{
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    
+}
+.dropdown-menu{
+    border: none;
+    background-color: transparent;
+}
+.nom-categ h1{
+    text-align: center;
+}
