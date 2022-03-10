@@ -32,18 +32,25 @@ function eventListener() {
     formulario.addEventListener("submit", enviar_formulario);
 }
 
-// Funcion validacionFormNombre donde pasa el foco de verde si hay datos en el input nombre o rojo  si no hay datos 
+// Funcion validacionFormNombre donde pasa el foco de verde si hay datos en el input nombre o rojo  si no hay datos o no es texto
 function validacionFormNombre(n) {
     if (n.target.type === "text") {
-
+       
         if (ern.test(n.target.value)) {//test Prueba una coincidencia en una cadena. Devuelve true o false.
             n.target.classList.remove("is-invalid");
             n.target.classList.add("is-valid");
+            
         } else {
             //mostrarError("El email no es valido");
             n.target.classList.remove("is-valid");
             n.target.classList.add("is-invalid");
-
+            Swal.fire({
+                title: 'Error',
+                text: 'Escribe tu nombre con letras, no se aceptan solo números.',
+                icon: 'Danger',
+                confirmButtonText: 'continuar',
+                confirmButtonColor: 'black'
+            });
         }
 
     }
@@ -53,7 +60,7 @@ function validacionFormNombre(n) {
 // Funcion validacionFormEmail donde pasa el foco de verde si hay datos en el input email o rojo  si no hay datos 
 function validacionFormEmail(e) {
     if (e.target.type === "email") {
-
+       
         if (er.test(e.target.value)) {
             e.target.classList.remove("is-invalid");
             e.target.classList.add("is-valid");
@@ -61,7 +68,13 @@ function validacionFormEmail(e) {
             //mostrarError("El email no es valido");
             e.target.classList.remove("is-valid");
             e.target.classList.add("is-invalid");
-
+            Swal.fire({
+                title: 'Error',
+                text: 'Escribe tu email con un @ y un punto, ejemplo: aaa@gmail.com.',
+                icon: 'Danger',
+                confirmButtonText: 'continuar',
+                confirmButtonColor: 'black'
+            });
         }
 
     }
@@ -73,7 +86,7 @@ function validacionFormEmail(e) {
 // Funcion validacionFormTelefono donde pasa el foco de verde si hay datos en el input telefono o rojo  si no hay datos 
 function validacionFormTelefono(t) {
     if (t.target.type === "text") {
-
+        
         if (ert.test(t.target.value)) {
             t.target.classList.remove("is-invalid");
             t.target.classList.add("is-valid");
@@ -81,7 +94,13 @@ function validacionFormTelefono(t) {
             //mostrarError("El email no es valido");
             t.target.classList.remove("is-valid");
             t.target.classList.add("is-invalid");
-
+            Swal.fire({
+                title: 'Error',
+                text: 'Escribe tu teléfono a 10 dígitos, registrar un teléfono a la vez.',
+                icon: 'Danger',
+                confirmButtonText: 'continuar',
+                confirmButtonColor: 'black'
+            });
         }
 
     }
@@ -92,7 +111,6 @@ function validacionFormTelefono(t) {
 // Funcion validacionFormMensaje donde pasa el foco de verde si hay datos en el textarea mensaje o rojo  si no hay datos 
 function validacionFormMensaje(m) {
     if (m.target.type === "textarea") {
-
         if (m.target.value) {
             m.target.classList.remove("is-invalid");
             m.target.classList.add("is-valid");
@@ -126,7 +144,7 @@ function enviar_formulario(f) {
         // mensaje que dice que la informacion de contacto tiene errores
         Swal.fire({
             title: 'Error',
-            text: 'La informacion de contacto tiene errores',
+            text: 'La información de contacto tiene errores',
             icon: 'Danger',
             confirmButtonText: 'continuar',
             confirmButtonColor: 'black'
@@ -135,7 +153,7 @@ function enviar_formulario(f) {
             // mensaje que dice que el formulario se envio correctamente 
         Swal.fire({
             icon: 'success', 
-            title: 'Exito',
+            title: 'Éxito',
             html: "<form action=\"mailto:ourclub.alpha@gmail.com?subject=form-registro-date%20pag%20Web\" method=\"post\" enctype=\"text/plain\"><input type=\"submit\" value=\"Enviar email\"></form>",
             confirmButtonText: 'continuar',
             confirmButtonColor: 'black' 
