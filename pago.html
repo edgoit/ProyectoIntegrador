@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/styles/pago.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./src/styles/stylesNosotros.css">
+    <!--<link rel="stylesheet" href="./src/styles/styles.css">
+    </head>
+    <link rel="stylesheet" href="./src/styles/styles.css">-->
+</head>
+
+<body>
+    <!------------------------  BARRA DE NAVEGACION  ------------------------>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="/src/img/logo.png" height="40" class="d-inline-block align-top" alt="" />
+                </a>
+                <!-- fin logo-->
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                        <!--button-->
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-expanded="false">
+                                Categorías
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Hombre</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Fútbol</a>
+                                        <a class="dropdown-item" href="#">Lifestyle</a>
+                                        <a class="dropdown-item" href="#">Running</a>
+                                        <a class="dropdown-item" href="#">Skateboarding</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Mujer</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Fútbol</a>
+                                        <a class="dropdown-item" href="#">Lifestyle</a>
+                                        <a class="dropdown-item" href="#">Running</a>
+                                        <a class="dropdown-item" href="#">Skateboarding</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Marca</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Adidas</a>
+                                        <a class="dropdown-item" href="#">Nike</a>
+                                        <a class="dropdown-item" href="#">Pirma</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Ayuda y
+                                        configuración</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Contactenos</a>
+                                        <a class="dropdown-item" href="#">Login</a>
+                                        <a class="dropdown-item" href="#">Salir</a>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--button-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!------------------------------------------------------- FORMULARIO DE PAGO     ------------------------------------------------------------------------------->
+  <section>
+    <div class="container  ">
+        <br>
+        <!--Se agrega encabezado-->
+        <div class="row row-cols-2   ">
+            <div class="col-md-5 ">
+                <h1>¿Cómo te gustaria recibir tu pedido?</h1>
+            </div>
+            <br>
+            <br>
+            <div class="row  aling-items-end">
+
+                <div class="col-md-10 ml-md-auto">
+                    <button class="btn btn-outline-dark col-md-12 offset-md-1 rounded-pill" type="reset"
+                        id="resetBtn">Entrega a
+                        Domicilio <img src="./src/img/ubicacion.png" ALING=RIGHT width="20px" alt=""> </button>
+                    <br>
+                    <br>
+
+                    <button class="btn btn-outline-dark col-md-12 offset-md-1 rounded-pill" type="reset"
+                        id="resetBtn">Entrega en Tienda <img src="./src/img/tienda.png" width="20px" alt=""> </button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+    <!----------formulario datos cliente para pago-------->
+    
+    <div class="conteiner">
+        <div class="row row-cols-2 ">
+            <div class="col px-md-5 ">
+                <!--Agregue "px-md-5"  para separarlo del borde de la ventana  parecido9 al contendeor de del encabezado-->
+                <form name="formulario" class="formulario-tarjeta">
+                    <div class="form-row d-flex justify-content-center ">
+                        <div class="form-group col-md-12">
+                            <label for="nombre">Nombre </label>
+                            <input type="text" class="form-control rounded-pill fondo " id="nombre"
+                                placeholder="Nombre completo">
+
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Dirección</label>
+                        <input type="text" class="form-control rounded-pill" id="inputAddress"
+                            placeholder="Agregue su dirección" />
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Ciudad</label>
+                            <input type="text" class="form-control rounded-pill" id="inputCity" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputZip">Código Postal</label>
+                            <input type="text" class="form-control rounded-pill" id="inputZip" />
+                        </div>
+                    </div>
+                    <!-- ----Aqui va el checkbox de la foma de pago con tarjeta ---------->
+
+                    <input type="checkbox" name="check" id="check" value="1" onchange="showContent()">
+                    <label>Pago con Tarjeta </label>
+
+                    <!-----------AQUI VA EL FORMULARIO DE PAGO POR TARJETA --------------->
+                    <div id="content" >
+                        <div class="form ">
+                            <div class="form-group row form-inline mx-1">
+                                <label for="numerotarjeta"> Número Tarjeta
+                                </label>
+                                <input type="text" maxlength="16" name="tarjeta" id="numerotarjeta"
+                                    placeholder="Solo caracteres númericos"
+                                    class="form-control rounded-pill col-sm-7 mx-sm-2" required autocomplete="off" />
+                            </div>
+                        </div>
+                        <div class="grupo">
+                            <div class="form-group  form-inline mx-1">
+                                <label for="inputNombre">Nombre</label>
+                                <input type="text" id="inputNombre" maxlength="32"
+                                    placeholder="Coloque el nombre de la tarjeta"
+                                    class="form-control rounded-pill col-sm-7 mx-sm-2" <a autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="flexbox">
+                            <div class="grupo expira">
+                                <label for="selectMes">Expiracion</label>
+                                <div class="flexbox">
+                                    <div class="grupo-select">
+                                        <select name="mes" id="selectMes">
+                                            <option disabled selected>Mes</option>
+                                        </select>
+                                        <!-- <i class="fas fa-angle-down"></i> -->
+                                    </div>
+                                    <div class="grupo-select">
+                                        <select name="year" id="selectYear">
+                                            <option disabled selected>Año</option>
+                                        </select>
+                                        <i class="fas fa-angle-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grupo-ccv">
+                                <label for="inputCCV">CCV</label>
+                                <input type="text" id="inputCCV" maxlength="3">
+                            </div>
+                        </div>
+                        <button type="submit" class=" form-control col-md-5 btn-enviar btn-outline-dark rounded-pill"
+                            id="centrado-btn">Enviar</button>
+
+                    </div>
+                    <br>
+                    <!------------    Aqui va el boton de paypal --------------------->
+                    <input type="checkbox" name="check2" id="check2" value="1" onchange="showContent2()">
+                    <label>Pago por PayPal</label>
+
+
+                    <div id="content2"  class="aling-items-center" >
+                        <!---------------------AQUI VA EL OTRO METODO DE PAGO -------------------->
+                        <!-- <button type="submit"
+                            class=" form-control col-md-5 btn-enviar btn-outline-dark rounded-pill">Enviar</button> -->
+                            <a href="https://www.paypal.com/mx/signin"  target="_Blank" class=" form-control col-md-5 btn-outline-dark rounded-pill btn-lg active"  id="centrado-btn" role="button" aria-pressed="true">PayPal</a>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                </form>
+
+
+
+
+
+
+            </div>
+            <div class="col">
+                <br>
+                <div class="col d-flex p-3 aling-items-center">
+
+                    <h2 class="offset-md-2">
+                        Detalles del pedido
+                    </h2>
+
+                </div>
+                <div class="container">
+                    <div class="row aling aling-items-center">
+                        <div class="col">
+                            <img src="./src/img/tenis_mujer.png" width="100%" alt="">
+                        </div>
+                        <div class="col alin aling-items-center">
+                            <p> Calzado de mujer </p>
+                            <p> Talla 26</p>
+                            <p><strong> $</strong> 1700.00</p>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <br>
+                    <br>
+                    
+                    <div class="row">
+                        <div class="col-12 col-md-10">
+                            <button class="btn btn-outline-dark col-md-10 offset-md-3 rounded-pill" type="reset"
+                                id="resetBtn">Confirmar </button>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+            <!--FORMULARIO-->
+        </div>
+    </div>
+    
+    <br>
+    <br>
+    <!--row- CONTENEDOR DE FORMULARIO-->
+
+    <!-- SE AGRGARA OTRA COAS EN ESTE ESPACIO YA ESTA BIEN-------------------------->
+
+<!-- Footer -->
+<footer>       
+    <div class="fondo">
+        <div class="container">
+
+            <!-- Grid row-->
+            <div class="row py-4 d-flex align-items-center">
+
+                <!-- Grid column -->
+                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                    <h5 class="mb-0"> <strong>ACERCA DE NOSOTROS</strong></h5>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                    <!-- Facebook -->
+                    <a href="https://www.google.com">
+                        <i class="bi bi-facebook ico-footer"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="https://www.google.com">
+                        <i class="bi bi-twitter ico-footer"></i>
+                    </a>
+                    <!-- iNSTAGRAM -->
+                    <a href="https://www.google.com">
+                        <i class="bi bi-instagram ico-footer"></i>
+                    </a>
+                    <!--Linkedin -->
+                    <a class="li-ic">
+                        <i class="bi bi-linkedin ico-footer"></i>
+                    </a>
+                    <!--Instagram-->
+                    <a class="ins-ic">
+                        <i class="fab fa-instagram white-text"> </i>
+                    </a>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+    </div>
+  
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+        <!-- Grid row -->
+        <div class="row mt-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                <!-- Content -->
+                <h6 class="text-uppercase font-weight-bold">OUR | CLUB</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
+                <p class="fot-cat">Somos un equipo multidisciplinario preparado para afrontar nuevos retos, teniendo como principal 
+                    objetivo aprender cosas nuevas y ser los mejores en lo que hacemos. </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Productos</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
+                <p>
+                    <a href="./hombreFutbol.html" class="fot-cat">Hombre fútbol</a>
+                </p>
+                <p>
+                    <a href="./hombreLife.html" class="fot-cat">Hombre life</a>
+                </p>
+                <p>
+                    <a href="./hombreRunning.html" class="fot-cat">Hombre running</a>
+                </p>
+                <p>
+                    <a href="./hombreSkate.html" class="fot-cat">Hombre skate</a>
+                </p>
+                <p>
+                    <a href="./mujerFutbol.html" class="fot-cat">Mujer fútbol</a>
+                </p>
+                <p>
+                    <a href="./mujerLife.html" class="fot-cat">Mujer life</a>
+                </p>
+                <p>
+                    <a href="./mujerRunning.html" class="fot-cat">Mujer running</a>
+                </p>
+                <p>
+                    <a href="./mujerSkate.html" class="fot-cat">Mujer skate</a>
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Enlaces</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
+                <p>
+                    <a href="./contacto.html" class="fot-cat">Contáctanos</a>
+                </p>
+                <p>
+                    <a href="./registro.html" class="fot-cat">Registrar</a>
+                </p>
+                <p>
+                    <a href="./login.html" class="fot-cat">Ingresar</a>
+                </p>
+                
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Contacto</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
+                <p class="fot-cat">
+                    <i class="fas fa-home"></i> Ciudad de México | Guadalajara
+                </p>
+                <p class="fot-cat">
+                    <i class="fas fa-envelope"></i> ourclub.alpha@gmail.com
+                </p>
+                <p class="fot-cat">
+                    <i class="fas fa-phone"></i> + 55 234 567 88
+                </p>
+                <p class="fot-cat">
+                    <i class="fas fa-print"></i> + 33 234 567 89
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright: Alpha Team
+
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="./src/js/pago.js"> </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

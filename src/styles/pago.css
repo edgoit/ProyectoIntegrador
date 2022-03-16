@@ -1,0 +1,77 @@
+.placeholder {
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+  }
+ 
+
+  
+.formulario-tarjeta input {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.formulario-tarjeta input::placeholder{
+  text-transform: lowercase;
+}
+
+.formulario-tarjeta .flexbox {
+	display: flex;
+	justify-content: space-between;
+}
+
+.formulario-tarjeta .expira {
+	width: 200%;
+}
+
+.formulario-tarjeta .ccv {
+
+
+height: 30px;
+padding: 5px;
+width: 250px;;
+
+ 
+} 
+
+.formulario-tarjeta .grupo-select {
+	width: 100%;
+	margin-right: 50px;
+
+}
+.formulario-tarjeta .select {
+	height: 50px;
+	width: 100%;
+	padding: 5px 12px;
+}
+/*    para el checkbox el display oculto  */
+#content {
+	display: none;
+	}
+#content2 {
+display: none;
+}
+/*     formato centrado a los botones ene div   */
+
+
+/* .btn-enviar {
+ display: flex;
+ text-align: center;
+
+ justify-content: center;
+	height: 45px;
+	width: 80%;
+  margin:20px;
+	padding: 5px 5px 0%;
+  border-radius: 30px;
+} */
+/*centrdo de boton */
+#centrado-btn{
+	text-align: center;
+	text-decoration:none ;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+	display: inline-block;
+}
+
+
