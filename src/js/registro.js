@@ -171,9 +171,9 @@ function enviar_formulario(f) {
         // mensaje que dice que la informacion de registro tiene errores
         Swal.fire({
             title: 'Error',
-            text: 'La informacion de registro contiene errores o las contraseñas con coinciden',
+            text: 'La información de registro contiene errores o las contraseñas con coinciden',
             icon: 'Danger',
-            confirmButtonText: 'continuar',
+            confirmButtonText: 'Continuar',
             confirmButtonColor: 'black'
         });
     }else{
@@ -181,7 +181,7 @@ function enviar_formulario(f) {
         Swal.fire({
             icon: 'success', 
             title: 'Registro exitoso',
-            confirmButtonText: 'continuar',
+            confirmButtonText: 'Continuar',
             confirmButtonColor: 'black' 
         });
         

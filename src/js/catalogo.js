@@ -15,14 +15,14 @@ function addItem(item) {
 addItem({
     'name': 'Life Style Blue&White-fx',
     'img': './src/img/imgCatalogo/tenis4.jpeg',
-    'description': 'Estilo y comodiad a tus pies',
+    'description': 'Estilo y comodidad a tus pies',
     'Precio':'$500.00 MXN'
 });
 
 addItem({
     'name': 'Life Style Arcoiris-fx',
     'img': './src/img/imgCatalogo/tenis10.jpg',
-    'description': 'Estilo y comodiad a tus pies',
+    'description': 'Estilo y comodidad a tus pies',
     'Precio':'$600.00 MXN'
 });
 
@@ -37,14 +37,14 @@ addItem({
 addItem({
     'name': 'Life Style Blue&White-fx',
     'img': './src/img/imgCatalogo/tenis13.jpeg',
-    'description': 'Estilo y comodiad a tus pies',
+    'description': 'Estilo y comodidad a tus pies',
     'Precio':'$500.00 MXN'
 });
 
 addItem({
     'name': 'Life Style Arcoiris-fx',
     'img': './src/img/imgCatalogo/tenis4.jpeg',
-    'description': 'Estilo y comodiad a tus pies',
+    'description': 'Estilo y comodidad a tus pies',
     'Precio':'$600.00 MXN'
 });
 
@@ -59,14 +59,14 @@ addItem({
 addItem({
     'name': 'Life Style Blue&White-fx',
     'img': './src/img/imgCatalogo/tenis11.jpg',
-    'description': 'Estilo y comodiad a tus pies',
+    'description': 'Estilo y comodidad a tus pies',
     'Precio':'$500.00 MXN'
 });
 
 addItem({
     'name': 'Life Style Arcoiris-fx',
     'img': './src/img/imgCatalogo/tenis13.jpeg',
-    'description': 'Estilo y comodiad a tus pies',
+    'description': 'Estilo y comodidad a tus pies',
     'Precio':'$600.00 MXN'
 });
 

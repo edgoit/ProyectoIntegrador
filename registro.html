@@ -103,31 +103,45 @@
 
     <!--FORMULARIO  -->
     <div class="container">
-        <br>
-        <br>
+        <br><br>
+        <h2 class="text-center"><strong> Registro </strong></h2>
         <br>
         <h2>Ingresa tus datos para obtener una cuenta</h2>
+        <br>
         <form id="form-registro-date" onsubmit="validarRegistro()">
             <div class="form-row">
                 <!-- Nombre-->
                 <div class="form-group col-md-12">
                     <label for="nombre">Nombre </label>
-                    <input type="text" class="form-control rounded-pill fondo "id="nombre" required>
+                    <input type="text" class="form-control rounded-pill fondo "id="nombre" 
+                    placeholder="Ingresa tu nombre" required>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        Escribe tu nombre con letras, no se aceptan números.
+                    </small>
                 </div>
                 <!-- Correo-->
                 <div class="form-group col-md-12">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control rounded-pill fondo " id="email" required>
+                    <input type="email" class="form-control rounded-pill fondo " id="email" 
+                    placeholder="Ingresa tu email" required>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        Escribe tu email con un @ y un punto, ejemplo: alpha@gmail.com.
+                    </small>
                 </div>
                 <!-- Teléfono-->
                 <div class="form-group col-md-7 ">
                     <label for="telefono">Teléfono</label>
-                    <input type="text" class="form-control rounded-pill fondo "  id="telefono" required>
+                    <input type="text" class="form-control rounded-pill fondo "  id="telefono"
+                    placeholder="Ingresa tu teléfono" required>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        Escribe tu teléfono a 10 dígitos, registrar un teléfono a la vez.
+                    </small>
                 </div>
                 <!--  Contraseña-->
                 <div class="form-group col-md-7  ">
                     <label for="inputPassword" >Contraseña</label>
-                    <input type="password" name="contraseña" class="form-control rounded-pill fondo" id="contraseña">
+                    <input type="password" name="contraseña" class="form-control rounded-pill fondo" id="contraseña"
+                    placeholder="Ingresa tu contraseña" required>
                     <small id="passwordHelpBlock" class="form-text text-muted">
                         Su contraseña debe tener entre 8 y 20 caracteres, al menos un caracter especial, una mayúscula, números, y no debe contener espacios.
                     </small>
@@ -136,8 +150,11 @@
                 <!--   confirmación Contraseña-->
                 <div class="form-group col-md-7  ">
                     <label for="inputPassword" >Confirma contraseña</label>
-                    <input type="password" name="contraseña2"class="form-control rounded-pill fondo" id="contraseña2">
-
+                    <input type="password" name="contraseña2"class="form-control rounded-pill fondo" id="contraseña2"
+                    placeholder="Escribe denuevo tu contraseña" required>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        Debe ser la misma que se ingresa en contraseña.
+                    </small>
                 </div>
 
             </div>
