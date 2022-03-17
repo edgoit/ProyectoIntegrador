@@ -11,7 +11,7 @@ function showContent() {
     element.style.display = 'none';
   }
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////  funcion esconder formulario de pago     ///////////////////////
 function showContent2() {
   element = document.getElementById("content2");
   check = document.getElementById("check2");
@@ -23,7 +23,14 @@ function showContent2() {
   }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////// se agrgarn validaciones al formulario de nombre pero en la en formulario de inicio ////////////////////////////
+
+
+
+
+
+
+
 ///////////valida la funcion de numero de tarjetas( solo permitira colocar numeros ) /////////////
 
 window.addEventListener("load", function () {
