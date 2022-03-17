@@ -70,9 +70,9 @@ function validacionFormEmail(e) {
             e.target.classList.add("is-invalid");
             Swal.fire({
                 title: 'Error',
-                text: 'Escribe tu email con un @ y un punto, ejemplo: alpha@gmail.com.',
+                text: 'Escribe tu correo electrónico con un @ y un punto, ejemplo: alpha@gmail.com.',
                 icon: 'Danger',
-                confirmButtonText: 'continuar',
+                confirmButtonText: 'Continuar',
                 confirmButtonColor: 'black'
             });
         }
@@ -98,7 +98,7 @@ function validacionFormTelefono(t) {
                 title: 'Error',
                 text: 'Escribe tu teléfono a 10 dígitos, registrar un teléfono a la vez.',
                 icon: 'Danger',
-                confirmButtonText: 'continuar',
+                confirmButtonText: 'Continuar',
                 confirmButtonColor: 'black'
             });
         }
@@ -146,7 +146,7 @@ function enviar_formulario(f) {
             title: 'Error',
             text: 'La información de contacto tiene errores',
             icon: 'Danger',
-            confirmButtonText: 'continuar',
+            confirmButtonText: 'Continuar',
             confirmButtonColor: 'black'
         });
     }else{
@@ -155,7 +155,7 @@ function enviar_formulario(f) {
             icon: 'success', 
             title: 'Éxito',
             html: "<form action=\"mailto:ourclub.alpha@gmail.com?subject=form-registro-date%20pag%20Web\" method=\"post\" enctype=\"text/plain\"><input type=\"submit\" value=\"Enviar email\"></form>",
-            confirmButtonText: 'continuar',
+            confirmButtonText: 'Continuar',
             confirmButtonColor: 'black' 
         });
         
