@@ -4,9 +4,9 @@ const btnReset = document.getElementById("resetBtn");
 const btnEnviar = document.querySelector("#enviar");
 
 // expresiones regulares para  validar nombre, email, telefono, y mensaje
-const ern = /[a-zA-Z]/;
+const ern = /^[a-zA-Z]{5,50}$/;
 const er = /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
-const ert = /^([0-9]{5})+((-{1})*)+([0-9]{5})$/i;
+const ert = /^[0-9]{10}$/;
 const erm = /^[a-zA-Z0-9?$@#()'!,+\-=_:.&€£*%\sÑñáéíóúÁÉÍÓÚ]+$/;
 
 
@@ -46,7 +46,7 @@ function validacionFormNombre(n) {
             n.target.classList.add("is-invalid");
             Swal.fire({
                 title: 'Error',
-                text: 'Escribe tu nombre con letras, no se aceptan solo números.',
+                text: 'Escribe 5 letras como mínimo para tu nombre, no se aceptan números',
                 icon: 'Danger',
                 confirmButtonText: 'continuar',
                 confirmButtonColor: 'black'
@@ -70,7 +70,7 @@ function validacionFormEmail(e) {
             e.target.classList.add("is-invalid");
             Swal.fire({
                 title: 'Error',
-                text: 'Escribe tu email con un @ y un punto, ejemplo: aaa@gmail.com.',
+                text: 'Escribe tu email con un @ y un punto, ejemplo: alpha@gmail.com.',
                 icon: 'Danger',
                 confirmButtonText: 'continuar',
                 confirmButtonColor: 'black'

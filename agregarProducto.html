@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <!-- bootstrap-icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- font-styles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700&display=swap" rel="stylesheet">
+    <!-- css-styles -->
+    <link rel="stylesheet" href="./src/styles/stylesNosotros.css">
+    <link rel="stylesheet" href="./src/styles/agregarProducto.css">
+
+</head>
+
+<body>
+    <!--Navbar-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="/src/img/logo.png" height="40" class="d-inline-block align-top" alt="">
+                </a><!-- fin logo-->
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <!--button-->
+                        <li class="nav-item dropdown">
+
+                            <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-expanded="false">
+                                Categorías
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                        data-toggle="dropdown" href="#">Hombre</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="hombreFutbol.html">Fútbol</a>
+                                        <a class="dropdown-item" href="hombreLife.html">Lifestyle</a>
+                                        <a class="dropdown-item" href="hombreRunning.html">Running</a>
+                                        <a class="dropdown-item" href="hombreSkate.html">Skateboarding</a>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                        data-toggle="dropdown" href="#">Mujer</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="mujerFutbol.html">Fútbol</a>
+                                        <a class="dropdown-item" href="mujerLife.html">Lifestyle</a>
+                                        <a class="dropdown-item" href="mujerRunning.html">Running</a>
+                                        <a class="dropdown-item" href="mujerSkate.html">Skateboarding</a>
+                                    </ul>
+                                </li>
+                                <!-- <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Marca</a>
+                                        <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Adidas</a>
+                                        <a class="dropdown-item" href="#">Nike</a>
+                                        <a class="dropdown-item" href="#">Pirma</a>
+                                        </ul>
+                                    </li> -->
+                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                        data-toggle="dropdown" href="#">Ayuda y configuración</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="contacto.html">Contáctanos</a>
+                                        <a class="dropdown-item" href="registro.html">Registro</a>
+                                        <a class="dropdown-item" href="login.html">Login</a>
+                                        <a class="dropdown-item" href="#">Salir</a>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <!--button-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contáctanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--FORMULARIO  -->
+    <section class="container bienvenido">
+        <h2>Bienvenido Administrador</h2>
+        <form id="formulario" class=" offset-md-2 col-md-10">
+            <div class="form-row">
+
+
+                <!-- Marca-->
+                <div class="form-group col-md-8 text-md-left">
+                    <label for="marca">Marca</label>
+                    <select id="marca" class="custom-select rounded-pill fondo">
+                        <option value="">Selecciona una marca</option>
+                        <option value="1">Adidas</option>
+                        <option value="2">Nike</option>
+                        <option value="3">Pirma</option>
+                    </select>
+                    <div class="invalid-feedback"> Debe elegir una opción</div>
+                    <!--Revisar-->
+                </div>
+                <!-- Categoria-->
+                <div class="form-group col-md-8 text-md-left">
+                    <label for="validationTextarea">Categoría</label>
+                    <select id="categoria" class="custom-select rounded-pill fondo">
+                        <option value="">Selecciona una Categoría</option>
+                        <option value="1">Fútbol-Mujer</option>
+                        <option value="2">Lifestyle-Mujer</option>
+                        <option value="3">Running-Mujer</option>
+                        <option value="4">Skateboarding-Mujer</option>
+                        <option value="5">Fútbol-Hombre</option>
+                        <option value="6">Lifestyle-Hombre</option>
+                        <option value="7">Running-Hombre</option>
+                        <option value="8">Skateboarding-Hombre</option>
+                    </select>
+                    <div class="invalid-feedback"> Debe elegir una opción</div>
+                    <!--Revisar-->
+                </div>
+
+
+                <!--  Nombre-->
+                <div class="form-group col-md-8 text-md-left">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control rounded-pill fondo" id="nombre"
+                        placeholder="Agrega el nombre del producto">
+
+                </div>
+
+                <!--  Descricpion-->
+                <div class="form-group col-md-8 text-md-left">
+                    <label for="descricpion">Descripción</label>
+                    <input type="text" class="form-control rounded-pill fondo" id="descricpcion"
+                        placeholder="Descricpción del producto">
+
+                </div>
+
+                <!-- Cantidad-->
+                <div class="form-group col-md-8 text-md-left">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" class="form-control rounded-pill fondo " id="cantidad" placeholder="Pares">
+                </div>
+                <!--  Talla-->
+                <div class="form-group col-md-8 text-md-left">
+                    <label for="validationTextarea">Talla</label>
+                    <select id="talla" class="custom-select rounded-pill fondo">
+                        <option value="">Selecciona una talla</option>
+                        <option value="1">24 CM</option>
+                        <option value="2">24.5 CM</option>
+                        <option value="3">25 CM</option>
+                        <option value="4">25.5 CM</option>
+                        <option value="5">26 CM</option>
+                        <option value="6">26.5 CM</option>
+                        <option value="1">27 CM</option>
+                        <option value="2">27.5 CM</option>
+                        <option value="3">28 CM</option>
+                        <option value="4">28.5 CM</option>
+                        <option value="5">29 CM</option>
+                        <option value="6">29.5 CM</option>
+                        <option value="5">30 CM</option>
+                    </select>
+                    <div class="invalid-feedback"> Debe elegir una opción</div>
+                    <!--Revisar-->
+                </div>
+                <!--  Precio-->
+                <div class="form-group col-md-8 text-md-left">
+                    <label for="precio">Precio</label>
+                    <input type="number" class="form-control rounded-pill fondo" id="precio" placeholder="$">
+
+                </div>
+
+            </div>
+
+            <div>
+                <!-- <button id="spinner" style="display: none;" class="btn btn-dark offset-md-5" type="submit">
+                    Loading...
+                    <span class="spinner-grow spinner-grow-sm" role="status"></span>
+                </button> -->
+                <input type="submit"  class="btn btn-dark col-md-3 offset-md-2 rounded-pill" value="Agregar">
+            </div>
+        </form>
+
+        <div>
+            <h2>Productos agregados</h2>
+            <div id="lista-productos"></div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="./src/js/agregarProducto.js"></script>
+</body>
+
+</html>
