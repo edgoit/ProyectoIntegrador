@@ -1,29 +1,37 @@
-/*
-    * Funcion del dropdown
-*/
-.dropdown-submenu{
-    position: relative;
+.btn-cont
+{
+    width: 100%;
 }
-.dropdown-submenu a::after{
-    transform: rotate(-90deg);
-    position: absolute;
-    right: 3px;
-    top: 40%;
+
+.nav-options
+{
+    justify-content: center;
 }
-.dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
-    display: flex;
-    flex-direction: column;
-    position: absolute !important;
-    margin-top: -30px;
-    left: 100%;
+
+.nav-item
+{
+    padding-left: 2vw;
 }
+
+.btn-ingresar
+{
+    border-radius: 5px;
+    width: 100%;
+}
+
+.btn-section
+{
+    width: 100%;
+}
+
+
 /*
    ============> Estilos del body
 */
 body
 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 85%, rgba(213,212,212,1) 100%); 
@@ -34,14 +42,19 @@ html
 {
     scroll-behavior: smooth;
 }
+
+#img-mision
+{
+    height: 70vh;
+    max-height: 750vh;
+    background-image: url("../img/bg_jt.jpg");
+    background-size: cover;
+}
+
 /*
    ============> Vuelve tranparente la navbar y la pone enfrente del jumbotron
 */
-.navbar
-{
-    background-color: transparent !important;
-    position: absolute;
-}
+
 
 .jumbotron 
 {
@@ -187,4 +200,16 @@ footer
 @keyframes blink
 {
     50%{border-color: transparent;}
+}
+
+@media (max-width:992px)
+{
+    #btn-category
+    {
+        padding-left: 0;
+    }
+    .btn-section
+    {
+        text-align: left;
+    }
 }

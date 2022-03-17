@@ -22,19 +22,22 @@
 
 <body>
     <!--Navbar-->
-    <header> 
-        <nav class="navbar navbar-expand-lg navbar-light" >
-            <div class="container">
+    <header>
+        <section class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <!-- logo -->
-                <a class="navbar-brand" href="#">
-                <img src="/src/img/logo.png" height="40" class="d-inline-block align-top" alt="">
-                </a><!-- fin logo-->
-        
+                <div class="navbar-brand d-flex">
+                    <a href="#">
+                        <img src="/src/img/logo.png" width="120" height="50" class="d-inline-block align-top" alt="">
+                    </a>
+                </div>
+                <!-- fin logo-->
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
                             <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
@@ -44,52 +47,58 @@
                         </li>
                         <!--button-->
                         <li class="nav-item dropdown">
-                            
-                                <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+
+                            <button class="btn dropdown-toggle" type="button" id="btn-category"
+                                data-toggle="dropdown" aria-expanded="false">
                                 Categorías
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                                <button class="btn dropdown-toggle btn-section" type="button"
+                                data-toggle="dropdown" aria-expanded="false">
+                                Hombre
                                 </button>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Hombre</a>
-                                        <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu">
                                         <a class="dropdown-item" href="hombreFutbol.html">Fútbol</a>
                                         <a class="dropdown-item" href="hombreLife.html">Lifestyle</a>
                                         <a class="dropdown-item" href="hombreRunning.html">Running</a>
                                         <a class="dropdown-item" href="hombreSkate.html">Skateboarding</a>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Mujer</a>
-                                        <ul class="dropdown-menu">
+                                    </ul>
+                                </li>
+                                <button class="btn dropdown-toggle btn-section" type="button"
+                                data-toggle="dropdown" aria-expanded="false">
+                                Mujer
+                                </button>
+                                    <ul class="dropdown-menu">
                                         <a class="dropdown-item" href="mujerFutbol.html">Fútbol</a>
                                         <a class="dropdown-item" href="mujerLife.html">Lifestyle</a>
                                         <a class="dropdown-item" href="mujerRunning.html">Running</a>
                                         <a class="dropdown-item" href="mujerSkate.html">Skateboarding</a>
-                                        </ul>
-                                    </li>
-                                    <!-- <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Marca</a>
-                                        <ul class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Adidas</a>
-                                        <a class="dropdown-item" href="#">Nike</a>
-                                        <a class="dropdown-item" href="#">Pirma</a>
-                                        </ul>
-                                    </li> -->
-                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Ayuda y configuración</a>
-                                    <ul class="dropdown-menu">
-                                    <a class="dropdown-item" href="contacto.html">Contáctanos</a>
-                                    <a class="dropdown-item" href="registro.html">Registro</a>
-                                    <a class="dropdown-item" href="login.html">Login</a>
-                                    <a class="dropdown-item" href="#">Salir</a>
                                     </ul>
                                 </li>
-                                </ul>
-                            
-                        </li><!--button-->
+                                <!-- <li class="dropdown-submenu d-lg-none"><a class="dropdown-item dropdown-toggle test"
+                                        data-toggle="dropdown" href="#">Ayuda y configuración</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item" href="contacto.html">Contáctanos</a>
+                                        <a class="dropdown-item" href="registro.html">Registro</a>
+                                        <a class="dropdown-item" href="login.html">Login</a>
+                                        <a class="dropdown-item" href="#">Salir</a>
+                                    </ul>
+                                </li> -->
+                            </ul>
+
+                        </li>
+                        <!--button-->
                         <li class="nav-item">
                             <a class="nav-link" href="contacto.html">Contáctanos</a>
                         </li>
+                        
+                        <button type="button" class="btn btn-dark btn_ingresar d-lg-none d-md-none">Ingresar</button>
                     </ul>
                 </div>
-            </div>
-        </nav>
+                <button type="button" class="btn btn-dark btn_ingresar d-none d-lg-block d-sm-none d-md-none col-lg-2">Ingresar</button>
+            </nav>
+        </section>    
     </header>
 
     <!--FORMULARIO  -->
