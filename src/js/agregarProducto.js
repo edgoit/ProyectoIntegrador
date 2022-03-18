@@ -1,69 +1,37 @@
-const formulario = document.querySelector("#formulario");
-const listaProductos = document.querySelector("#lista-productos");
-
-let productos = [];
-
-eventListeners();
+const form = document.getElementById("formulario");
 
 
-function eventListeners(){
-    formulario.addEventListener("submit", agregarProductos);
-}
+arrayProductos = [];
 
 
-function agregarProductos(e){
-e.preventDefault();
-  const marcas = document.querySelector("#marca").value;
+form.addEventListener("submit",e =>{
+    e.preventDefault();
 
-//   if(marcas === ""){
+    let marca = document.getElementById("marca");
+    let categoria = document.getElementById("categoria");
+    let nombre = document.getElementById("nombre");    
+    let descripcion = document.getElementById("descripcion");
+    let talla = document.getElementById("talla");
+    let cantidad = document.getElementById("cantidad");
+    let precio = document.getElementById("precio");
+    
+    console.log(marca.value);
+    console.log(descripcion.value);
 
-//   }
-
- const marcaObj={
-     id: Date.now(),
-     marcas
- }
-  productos = [...productos, marcaObj];
-
-  crearHTML();
-
-  console.log(productos);
-  const categorias = document.querySelector("#categoria").value;
-  const nombres = document.querySelector("#nombre").value;
-  const descricpciones = document.querySelector("#descricpcion").value;
-  const cantidades = document.querySelector("#cantidad").value;
-  const tallas = document.querySelector("#talla").value;
-  const precios = document.querySelector("#precio").value;
-  console.log(marcas);
-  console.log(categorias);
-  console.log(nombres);
-  console.log(descricpciones);
-  console.log(cantidades);
-  console.log(tallas);
-  console.log(precios);
-}
-
-
-function crearHTML(){
-    if(productos.length > 0 ){
-        productos.forEach( marcas=>{
-            const li = document.createElement("li");
-            li.innerText = marcas.marcas;
-            listaProductos.appendChild(li);
-        });
+    let nuevoProducto = 
+    {
+        "id" : arrayProductos.length + 1,
+        "nombre" :  nombre.value,
+        "marca" : marca.value,
+        "categoria" : categoria.value,
+        "descripcion" : descripcion.value,
+        "talla" : talla.value,
+        "cantidad" : cantidad.value,
+        "precio" : parseInt(precio.value)
     }
-}
+    arrayProductos.push(nuevoProducto);
 
-
-// const marca = {
-//     marca1 : "adidas",
-//     marca2 : "nike",
-//     marca3 : "pirma"
-// }
-
-// const marcaString = JSON.stringify(marca);
-// localStorage.setItem("marca", marcaString);
-
-// const marcas = localStorage.getItem("marca");
-// console.log(JSON.parse(marcas));
-
+    let jsonProducto = JSON.stringify(arrayProductos);
+    console.log(typeof jsonProducto);
+    localStorage.setItem("productsData", jsonProducto);
+});
