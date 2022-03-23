@@ -2,3 +2,21 @@ h6{
     font-size: 0.8rem;
     text-align: center;
 }
+
+footer{
+    
+    background: rgb(12,7,44);
+    background: linear-gradient(0deg, rgba(12,7,44,1) 0%, rgba(52,40,117,1) 50%, rgba(86,26,80,1) 100%);
+    /*
+//opcion 2 de degradado
+    background: rgb(12,7,44);
+    background: linear-gradient(0deg, rgba(12,7,44,1) 0%, rgba(86,26,80,1) 35%, rgba(87,86,169,1) 100%);*/
+
+}
+.btn-dark{
+    background: #342875;
+    border: #0C072C;
+}
+.btn:hover{
+    background: #561a50;
+}
