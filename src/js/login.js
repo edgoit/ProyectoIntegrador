@@ -65,12 +65,12 @@ function validacionFormContraseña(t) {
 function enviar_formulario(f) {
     f.preventDefault();
     //Mostar el spinner
-    const spinner = document.querySelector("#spinner");
-    spinner.style.display = "flex";
+   // const spinner = document.querySelector("#spinner");
+   // spinner.style.display = "flex";
 
     // Despues de tres segundos ocultar el spinner
     setTimeout(() => {
-        spinner.style.display = "none";
+       // spinner.style.display = "none";
        let valorEmail = er.test(email.value);
        let valorContraseña = ert.test(contraseña.value);
 
@@ -86,13 +86,22 @@ function enviar_formulario(f) {
         });
     }else{
             // mensaje que dice que el ingreso ha sido exitoso
-        Swal.fire({
-            icon: 'success', 
-            title: 'Exito',
-            text: 'Nos alegra tenerte devuelta',
-            confirmButtonText: 'Continuar',
-            confirmButtonColor: 'black' 
-        });
+    
+        function EventoAlert(){
+            Swal.fire({
+                icon: 'success', 
+                title: 'Exito',
+                text: 'Nos alegra tenerte devuelta',
+                confirmButtonText: 'Continuar',
+                confirmButtonColor: 'black' 
+            
+          }).then((result)=>{
+            if(result.isConfirmed){
+              location="index.html"
+            }
+          })
+          }
+          
         
     }
 
