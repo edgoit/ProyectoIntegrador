@@ -1,4 +1,28 @@
+/*Aplicando estilos al h6*/
 h6{
     font-size: 0.8rem;
     text-align: center;
 }
+
+.btn-dark{
+    background-color: #342875;
+}
+
+.btn:hover{
+    background-color: #561A50;
+}
+/* Desactivar boton enviar para que se llene el formulario primero*/
+
+ /* #enviar{
+    cursor: not-allowed;
+    pointer-events:none;
+    opacity: 0.5;
+}   */
+
+/*Haciendo mas chica la letra para dispositivo movil*/
+@media (max-width: 600px) {
+    h6{
+        font-size: 0.6rem;
+        text-align: center;
+    }
+  }
