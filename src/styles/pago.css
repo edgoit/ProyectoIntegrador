@@ -8,11 +8,11 @@
   
 .formulario-tarjeta input {
 	margin-bottom: 20px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 }
-.formulario-tarjeta input::placeholder{
+/* .formulario-tarjeta input::placeholder{
   text-transform: lowercase;
-}
+} */
 
 .formulario-tarjeta .flexbox {
 	display: flex;
@@ -28,9 +28,7 @@
 
 height: 30px;
 padding: 5px;
-width: 250px;;
-
- 
+width: 250px
 } 
 
 .formulario-tarjeta .grupo-select {
@@ -42,7 +40,12 @@ width: 250px;;
 	height: 50px;
 	width: 100%;
 	padding: 5px 12px;
+	
 }
+
+/*            */
+
+
 /*    para el checkbox el display oculto  */
 #content {
 	display: none;
