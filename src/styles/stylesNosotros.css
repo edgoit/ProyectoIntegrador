@@ -43,32 +43,32 @@ html
     scroll-behavior: smooth;
 }
 
-#img-mision
+.title-card
 {
-    height: 70vh;
-    max-height: 750vh;
-    background-image: url("../img/bg_jt.jpg");
-    background-size: cover;
+    font-weight: 800;
+    font-size: 10vw;
+    margin-top: 10%;
+    margin-left: 5vw;
+
+}
+.body-card
+{
+    font-size: 5vw;
+    font-weight: 300;
+    margin-left: 5vw;
 }
 
-/*
-   ============> Vuelve tranparente la navbar y la pone enfrente del jumbotron
-*/
-
-
-.jumbotron 
+.conocenos
 {
-    background-image: url("../img/bg_jt.jpg");
-    background-position: 0% 25%;
-    background-size: cover;
-    padding-top: 50vh;
-}
-
-#arrow
-{
-    font-size: 30px;
+    font-size: 1vw;
     color: white;
+    background-color: #000000;
+    border-radius: 3px;
+    border-style: none;
+    margin-left: 5vw;
+
 }
+
 
 /*
    ============> Sombra del jumbotron
@@ -138,7 +138,11 @@ footer
     color: white;
 }
 
-
+.bi-linkedin, .bi-github, .bi-envelope-fill
+{
+    font-size: 1.5rem;
+    color:#5756a9;
+}
 
 .ico-footer{
     padding-right: 1vw;
@@ -213,3 +217,4 @@ footer
         text-align: left;
     }
 }
+

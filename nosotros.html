@@ -16,8 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700&display=swap" rel="stylesheet">
     <!-- css-styles -->
     <link rel="stylesheet" href="./src/styles/stylesNosotros.css">
-    <!-- css de footer-->
-    <link rel="stylesheet" href="./src/styles/formularioLogin.css">
 </head>
 
 <body>
@@ -77,17 +75,7 @@
                                         <a class="dropdown-item" href="mujerSkate.html">Skateboarding</a>
                                     </ul>
                                 </li>
-                                <!-- <li class="dropdown-submenu d-lg-none"><a class="dropdown-item dropdown-toggle test"
-                                        data-toggle="dropdown" href="#">Ayuda y configuración</a>
-                                    <ul class="dropdown-menu">
-                                        <a class="dropdown-item" href="contacto.html">Contáctanos</a>
-                                        <a class="dropdown-item" href="registro.html">Registro</a>
-                                        <a class="dropdown-item" href="login.html">Login</a>
-                                        <a class="dropdown-item" href="#">Salir</a>
-                                    </ul>
-                                </li> -->
                             </ul>
-
                         </li>
                         <!--button-->
                         <li class="nav-item">
@@ -102,16 +90,14 @@
         </section>    
     </header>
 
-    <!-- Jumbotron -->
-    <section class="container-flex  about-text center m-0">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1><span class="align-text-bottom us-text">NOSOTROS</span></h1>
-                <p>Somos un equipo multidisciplinario preparado para afrontar nuevos retos, teniendo como principal
-                    objetivo
-                    aprender cosas nuevas y ser los mejores en lo que hacemos.
-                </p>
-                <a href="#info"><i class="bi bi-arrow-down-circle-fill" id="arrow"></i></a>
+    
+    <section class="container-fluid p-0">
+        <div class="card text-white m-0">
+            <img src="./src/img/bg1.jpg" alt="bg-image">
+            <div class="card-img-overlay m-0">
+                <h5 class="card-title title-card">¡Hola!</h5>
+                <p class="card-body body-card p-0">Somos ALPHA TEAM</p>
+                <button onclick="window.location.href='#info';" class="btn conocenos">CONOCENOS <i class="bi bi-lightning-charge-fill"></i></button>
             </div>
         </div>
     </section>
@@ -373,185 +359,163 @@
             </div><!-- Fin de cuarta sección de cards-->
         </section>
     </section>
-   <!-- Footer -->
-   <footer>       
-    <div class="fondo">
-        <div class="container">
+    <!-- Footer -->
+    <footer>
+        
+        <div class="fondo">
+            <div class="container">
 
-            <!-- Grid row-->
-            <div class="row py-4 d-flex align-items-center">
+                <!-- Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h5 class="mb-0"> <strong>ACERCA DE NOSOTROS</strong></h5>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                        <!-- Facebook -->
+                        <a href="https://www.google.com">
+                            <i class="bi bi-facebook ico-footer"></i>
+                        </a>
+                        <!-- Twitter -->
+                        <a href="https://www.google.com">
+                            <i class="bi bi-twitter ico-footer"></i>
+                        </a>
+                        <!-- iNSTAGRAM -->
+                        <a href="https://www.google.com">
+                            <i class="bi bi-instagram ico-footer"></i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+                            <i class="bi bi-linkedin ico-footer"></i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram white-text"> </i>
+                        </a>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+
+            <!-- Grid row -->
+            <div class="row mt-3">
 
                 <!-- Grid column -->
-                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                    <h5 class="mb-0"> <strong>ACERCA DE NOSOTROS</strong></h5>
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold">OUR | CLUB</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
+                    <p class="fot-cat">Somos un equipo multidisciplinario preparado para afrontar nuevos retos, teniendo como principal 
+                        objetivo aprender cosas nuevas y ser los mejores en lo que hacemos. </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Productos</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
+                    <p>
+                        <a href="./hombreFutbol.html" class="fot-cat">Hombre fútbol</a>
+                    </p>
+                    <p>
+                        <a href="./hombreLife.html" class="fot-cat">Hombre life</a>
+                    </p>
+                    <p>
+                        <a href="./hombreRunning.html" class="fot-cat">Hombre running</a>
+                    </p>
+                    <p>
+                        <a href="./hombreSkate.html" class="fot-cat">Hombre skate</a>
+                    </p>
+                    <p>
+                        <a href="./mujerFutbol.html" class="fot-cat">Mujer fútbol</a>
+                    </p>
+                    <p>
+                        <a href="./mujerLife.html" class="fot-cat">Mujer life</a>
+                    </p>
+                    <p>
+                        <a href="./mujerRunning.html" class="fot-cat">Mujer running</a>
+                    </p>
+                    <p>
+                        <a href="./mujerSkate.html" class="fot-cat">Mujer skate</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Enlaces</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
+                    <p>
+                        <a href="./contacto.html" class="fot-cat">Contáctanos</a>
+                    </p>
+                    <p>
+                        <a href="./registro.html" class="fot-cat">Registrar</a>
+                    </p>
+                    <p>
+                        <a href="./login.html" class="fot-cat">Ingresar</a>
+                    </p>
+                    
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contacto</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
+                    <p class="fot-cat">
+                        <i class="fas fa-home"></i> Ciudad de México | Guadalajara
+                    </p>
+                    <p class="fot-cat">
+                        <i class="fas fa-envelope"></i> ourclub.alpha@gmail.com
+                    </p>
+                    <p class="fot-cat">
+                        <i class="fas fa-phone"></i> + 55 234 567 88
+                    </p>
+                    <p class="fot-cat">
+                        <i class="fas fa-print"></i> + 33 234 567 89
+                    </p>
+
                 </div>
                 <!-- Grid column -->
 
             </div>
-            <!-- Grid row-->
+            <!-- Grid row -->
 
         </div>
-    </div>
-  
-    <!-- Footer Links -->
-     <div class="container text-center text-md-left mt-5">
+        <!-- Footer Links -->
 
-        <!-- Grid row -->
-        <div class="row mt-3">
-
-            <!-- Este apartado no existe en el figma por lo cual se comenta para poder reasignar espacio -->
-            <!-- Grid column -->
-            
-            <!-- <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-                
-                    <h6 class="text-uppercase font-weight-bold">OUR | CLUB</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
-                <p class="fot-cat">Somos un equipo multidisciplinario preparado para afrontar nuevos retos, teniendo como principal 
-                    objetivo aprender cosas nuevas y ser los mejores en lo que hacemos. </p>
-
-            </div> -->
-            <!-- Grid column -->
-            
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Productos</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
-                <p>
-                    <a href="./hombreFutbol.html" class="fot-cat">Hombre fútbol</a>
-                </p>
-                <p>
-                    <a href="./hombreLife.html" class="fot-cat">Hombre life</a>
-                </p>
-                <p>
-                    <a href="./hombreRunning.html" class="fot-cat">Hombre running</a>
-                </p>
-                <p>
-                    <a href="./hombreSkate.html" class="fot-cat">Hombre skate</a>
-                </p>
-                <p>
-                    <a href="./mujerFutbol.html" class="fot-cat">Mujer fútbol</a>
-                </p>
-                <p>
-                    <a href="./mujerLife.html" class="fot-cat">Mujer life</a>
-                </p>
-                <p>
-                    <a href="./mujerRunning.html" class="fot-cat">Mujer running</a>
-                </p>
-                <p>
-                    <a href="./mujerSkate.html" class="fot-cat">Mujer skate</a>
-                </p>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Enlaces</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
-                <p>
-                    <a href="./contacto.html" class="fot-cat">Contáctanos</a>
-                </p>
-                <p>
-                    <a href="./registro.html" class="fot-cat">Registrar</a>
-                </p>
-                <p>
-                    <a href="./login.html" class="fot-cat">Ingresar</a>
-                </p>
-                
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Contacto</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
-                <p class="fot-cat">
-                    <i class="fas fa-home"></i> Ciudad de México | Guadalajara
-                </p>
-                <p class="fot-cat">
-                    <i class="fas fa-envelope"></i> ourclub.alpha@gmail.com
-                </p>
-                <p class="fot-cat">
-                    <i class="fas fa-phone"></i> + 55 234 567 88
-                </p>
-                <p class="fot-cat">
-                    <i class="fas fa-print"></i> + 33 234 567 89
-                </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                <h6 class="text-uppercase font-weight-bold">Siguenos</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto border" style="width: 80px;">
-                <hr>
-                <!-- Facebook -->
-                <a href="https://www.google.com">
-                    <i class="bi bi-facebook ico-footer"></i>
-                </a>
-                <!-- Twitter -->
-                <a href="https://www.google.com">
-                    <i class="bi bi-twitter ico-footer"></i>
-                </a>
-                <!-- iNSTAGRAM -->
-                <a href="https://www.google.com">
-                    <i class="bi bi-instagram ico-footer"></i>
-                </a>
-                <!--Linkedin -->
-                <a class="li-ic">
-                    <i class="bi bi-linkedin ico-footer"></i>
-                </a>
-                <!--Instagram-->
-                <a class="ins-ic">
-                    <i class="fab fa-instagram white-text"> </i>
-                </a>
-            </div>
-            <!-- Grid column -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2022 Copyright: Alpha Team
 
         </div>
-        <!-- Grid row -->
+        <!-- Copyright -->
 
-   </div>
-    <!-- Footer Links -->
+    </footer>
+    <!-- Footer -->
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2022 Copyright: Alpha Team
-
-    </div>
-    <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-
-
-    <!-- <footer>
-        <div class="container-flex ">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-              <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                  <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-                </a>
-                <span class="text-muted">© Alpha Team, 2022</span>
-              </div>
-          
-              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-              </ul>
-            </footer>
-          </div>
-    </footer> -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
