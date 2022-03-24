@@ -118,6 +118,7 @@ function EventoentregaaTien(){
 }
 
 
+
 /************************funcion de confirmar pedido********************************** */
 
 function EventoAlert(){
