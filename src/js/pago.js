@@ -22,7 +22,6 @@ function showContent2() {
     element.style.display = 'none';
   }
 }
-
 //////////////////// se agrgarn validaciones al formulario de nombre pero en la en formulario de inicio ////////////////////////////
 formulario.nombre.addEventListener('keyup', (e) => {
 	let valorInput = e.target.value;
@@ -30,16 +29,16 @@ formulario.nombre.addEventListener('keyup', (e) => {
 	formulario.nombre.value = valorInput.replace(/[0-9]/g, '');
 });
 ////////////// CODIGO POSTAL SOLO NÚMEROS  /////
-formulario.inputZip.addEventListener('keyup', () => {
+formulario.inputcodigo.addEventListener('keyup', () => {
 
 
-	formulario.inputZip.value = formulario.inputZip.value
+	formulario.inputcodigo.value = formulario.inputcodigo.value
 	// Eliminar los espacios
 	.replace(/\s/g, '')
 	// Eliminar las letras
 	.replace(/\D/g, '');
 
-	ccv.textContent = formulario.inputZip.value;
+	ccv.textContent = formulario.inputcodigo.value;
 });
 
 

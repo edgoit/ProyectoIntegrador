@@ -68,7 +68,7 @@
   padding: 10px;
   box-shadow: 5px 10px 8px #888888;
 }
-
+/*   resposivo telefono */
 @media (max-width: 600px) {
   .btn-enviar {
     margin-top: 50%;
@@ -117,3 +117,4 @@ label {
 .margenes{
   margin-left: -20% !important;
 }
+
