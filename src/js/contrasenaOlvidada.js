@@ -17,7 +17,7 @@ function eventListener() {
     //document.addEventListener("DOMContentLoaded", iniciarForm);
     email.addEventListener("blur", validacionFormEmail);
     //continuar
-    formulario.addEventListener("submit", recordar_contraseña);
+    formulario.addEventListener("submit", recordar_contrasena);
 
 
 }
@@ -48,40 +48,35 @@ formulario.email.addEventListener('keyup', (e) => {
 });
 
 //Enviar el formulario
-function recordar_contraseña(f) {
-    f.preventDefault();
+function recordar_contrasena(evento) {
+   
+    evento.preventDefault();
 
        let valorEmail = er.test(email.value);
-
+   
         if(valorEmail == ""){
-        // mensaje que dice ingreses el correo
-        Swal.fire({
-            title: 'Error',
-            text: 'Ingresa un correo válido',
-            icon: 'warning',
-            confirmButtonText: 'Regresar',
-            confirmButtonColor: 'black'
-        });
-    }else{
-            // mensaje que dice que el ingreso ha sido exitoso
-        Swal.fire({
-            icon: 'success', 
-            title: 'Exito',
-            text: 'Se ha enviado un código',
-            confirmButtonText: 'Continuar',
-            confirmButtonColor: 'black' 
-<<<<<<< HEAD:src/js/contrasenaOlvidada.js
-        });
+            // mensaje que dice ingreses el correo
+            Swal.fire({
+                title: 'Error',
+                text: 'Ingresa un correo válido',
+                icon: 'warning',
+                confirmButtonText: 'Regresar',
+                confirmButtonColor: 'black'
+            });
 
-=======
-        }, function(){
-            window.location.href="http://login.html";
-          }
-        );
+        }else{
+                // mensaje que dice que el ingreso ha sido exitoso
+            Swal.fire({
+                icon: 'success', 
+                title: 'Exito',
+                text: 'Se ha enviado un código',
+                confirmButtonText: 'Continuar',
+                confirmButtonColor: 'black' 
 
-        
->>>>>>> 6fc23c7a67b36e5099829bff5097d466440a2733:src/js/contraseñaOlvidada.js
-    }
+            });
+
+
+        }
 
 
 }
