@@ -57,20 +57,17 @@ function recordar_contraseña(f) {
         });
     }else{
             // mensaje que dice que el ingreso ha sido exitoso
-            function EventoAlert(){
-                Swal.fire({
-                    icon: 'success', 
-                    title: 'Exito',
-                    text: 'Se ha enviado un código',
-                    confirmButtonText: 'Continuar',
-                    confirmButtonColor: 'black'
-                
-              }).then((result)=>{
-                if(result.isConfirmed){
-                  location="./index.html"
-                }
-              })
-              }
+        Swal.fire({
+            icon: 'success', 
+            title: 'Exito',
+            text: 'Se ha enviado un código',
+            confirmButtonText: 'Continuar',
+            confirmButtonColor: 'black' 
+        }, function(){
+            window.location.href="http://login.html";
+          }
+        );
+
         
     }
 
