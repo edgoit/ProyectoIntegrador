@@ -67,6 +67,7 @@ function recordar_contraseña(f) {
             window.location.href="http://login.html";
           }
         );
+
         
     }
 

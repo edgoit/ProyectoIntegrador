@@ -6,7 +6,7 @@ const btnEnviar = document.querySelector("#enviar");
 // expresiones regulares para  validar nombre, email, telefono, y contraseña
 const ern = /[a-zA-Z]/;
 const er = /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
-const ert = /^([0-9]{5})+((-{1})*)+([0-9]{5})$/i;
+const ert = /^(\(?\+?[\d]{1,3}\)?)\s?([\d-]{1,3})\s?([\d][\s\.-]?){6,8}$/;
 const erc=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,20}$/;
 
 
@@ -53,6 +53,26 @@ function validacionFormNombre(n) {
     }
 }
 
+// validacion no permite ingresar numeros en input nombre
+formulario.nombre.addEventListener('keyup', (e) => {
+	let valorInput = e.target.value;
+
+	formulario.nombre.value = valorInput.replace(/[0-9]/g, '');
+});
+
+// validacion no permite ingresar letras en input telefono
+formulario.telefono.addEventListener('keyup', (e) => {
+	let valorInput = e.target.value;
+
+	formulario.telefono.value = valorInput.replace(/[a-zA-Z]/g, '');
+});
+
+// validacion no permite ingresar letras en input telefono
+formulario.email.addEventListener('keyup', (e) => {
+	let valorInput = e.target.value;
+
+	formulario.email.value = valorInput.replace(/[A-Z]/g, '');
+});
 
 // Funcion validacionFormEmail donde pasa el foco de verde si hay datos en el input email o rojo  si no hay datos 
 function validacionFormEmail(e) {
@@ -153,17 +173,18 @@ function validarRegistro(){
 
 }
 
+ let usuariosRegistrados = [];
 
 //Enviar el formulario
 function enviar_formulario(f) {
     f.preventDefault();
-    //Mostar el spinner
+  /*  //Mostar el spinner
     const spinner = document.querySelector("#spinner");
-    spinner.style.display = "flex";
+   spinner.style.display = "flex";
 
     // Despues de tres segundos ocultar el spinner
     setTimeout(() => {
-        spinner.style.display = "none";
+        spinner.style.display = "none";*/
        let valorNombre = ern.test(nombre.value);
        let valorTelefono = ert.test(telefono.value);
 
@@ -177,7 +198,21 @@ function enviar_formulario(f) {
             confirmButtonColor: 'black'
         });
     }else{
-            // mensaje que dice que el registro se hizo correctamente correctamente 
+
+        let newUser = {
+            "name" : nombre.value,
+            "email" : email.value,
+            "telefono" : telefono.value,
+            "contraseña" : contraseña.value
+        }
+        console.log(newUser);
+        usuariosRegistrados.push(newUser);
+
+        let jsonUsuario = JSON.stringify(usuariosRegistrados);
+        console.log(typeof jsonUsuario);
+        localStorage.setItem("usersData", jsonUsuario);
+       
+        // mensaje que dice que el registro se hizo correctamente correctamente 
         Swal.fire({
             icon: 'success', 
             title: 'Registro exitoso',
@@ -187,8 +222,7 @@ function enviar_formulario(f) {
         
     }
 
-    }, 3000);
-
+    
 }
 
 
