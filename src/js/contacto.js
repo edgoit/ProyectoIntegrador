@@ -1,7 +1,7 @@
 //Agregamos Datos desde contacto.html con ById a contactoVali.js
 const formulario = document.getElementById("form-registro-date");
 const btnReset = document.getElementById("resetBtn");
-let btnEnviar = document.querySelector("#enviar");
+const btnEnviar = document.querySelector("#enviar");
 
 
 
@@ -58,7 +58,7 @@ function validacionFormNombre(n) {
             n.target.classList.add("is-invalid");
             Swal.fire({
                 title: 'Error',
-                text: 'Escribe un nombre con al menos 2 letras, no se aceptan números.',
+                text: 'Escribe un nombre, no se aceptan números.',
                 icon: 'Danger',
                 confirmButtonText: 'continuar',
                 confirmButtonColor: 'black'
