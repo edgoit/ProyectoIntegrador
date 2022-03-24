@@ -94,44 +94,42 @@ formulario.inputCCV.addEventListener('keyup', () => {
 
 	ccv.textContent = formulario.inputCCV.value;
 });
+//////////********   se dan aalertas a los botone      ************************************* */
+function EventoentregaaDom(){
+  Swal.fire({
+    position: 'top-end',
+    icon: 'info',
+    title: 'Tu pedido será entregado a domicilio',
+    showConfirmButton: false,
+    
+    timer: 1500
+  
+});
+}
+function EventoentregaaTien(){
+  Swal.fire({
+    position: 'top-end',
+    icon: 'info',
+    title: 'Tu pedido lo recogeras en tienda :D',
+    showConfirmButton: false,
+    timer: 1500
+  
+});
+}
+
 
 /************************funcion de confirmar pedido********************************** */
 
-function enviar_formulario(f) {
-  f.preventDefault();
-  //Mostar el spinner
-  const spinner = document.querySelector("#spinner");
-  spinner.style.display = "flex";
-
-  // Despues de tres segundos ocultar el spinner
-  setTimeout(() => {
-      spinner.style.display = "none";
-     let valorNombre = ern.test(nombre.value);
-     let valorTelefono = ert.test(telefono.value);
-     let valorMensaje = erm.test(mensaje.value);
-
-      if(valorNombre == "" || valorTelefono == "" || valorMensaje == ""){
-     console.log(valorNombre);
-      // mensaje que dice que la informacion de contacto tiene errores
-      Swal.fire({
-          title: 'Error',
-          text: 'La información de contacto tiene errores',
-          icon: 'Danger',
-          confirmButtonText: 'Continuar',
-          confirmButtonColor: 'black'
-      });
-  }else{
-          // mensaje que dice que el formulario se envio correctamente 
-      Swal.fire({
-          icon: 'success', 
-          title: 'Éxito',
-          html: "<form action=\"mailto:ourclub.alpha@gmail.com?subject=form-registro-date%20pag%20Web\" method=\"post\" enctype=\"text/plain\"><input type=\"submit\" value=\"Enviar email\"></form>",
-          confirmButtonText: 'Continuar',
-          confirmButtonColor: 'black' 
-      });
-      
+function EventoAlert(){
+  Swal.fire({
+    icon: 'success', 
+    title: 'Tu pedido ha sido confirmado',
+    confirmButtonText: 'Continuar',
+    confirmButtonColor: 'black' ,
+  //con esto redirijo al darle ok al swialert 
+}).then((result)=>{
+  if(result.isConfirmed){
+    location="mujerFutbol.html"
   }
-
-  }, 3000);
-
+})
 }

@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous" />
     <link rel="stylesheet" href="./src/styles/stylesNosotros.css">
+    <!--sweetalert2-->
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-minimal@4/minimal.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <!--<link rel="stylesheet" href="./src/styles/styles.css">
     </head>
     <link rel="stylesheet" href="./src/styles/styles.css">-->
@@ -101,176 +104,206 @@
 
     <!------------------------------------------------------- FORMULARIO DE PAGO     ------------------------------------------------------------------------------->
     <section>
-        <br>
-        
+
+
         <div class="container  ">
-            
+
             <!--Se agrega encabezado-->
-            <div class="row row-cols-2   ">
-                <div class="col-md-5 ">
-                    <h1>¿Cómo te gustaría recibir tu pedido?</h1>
+            <div class="row row-cols-2  mt-2 ">
+                <div class="col-md-5  text-center mb-4">
+                    <h1 class="tamañoletra">¿Cómo te gustaría recibir tu pedido?</h1>
                 </div>
-                <br>
-                <br>
-                <br>
+
                 <div class="row  aling-items-end">
 
                     <div class="col-md-10 ml-md-auto">
                         <button class="btn btn-outline-dark col-md-12 offset-md-1 rounded-pill" type="reset"
-                            id="resetBtn">Entrega a
+                            onclick="EventoentregaaDom()" id="resetBtn">Entrega a
                             domicilio <img src="./src/img/ubicacion.png" ALING=RIGHT width="20px" alt=""> </button>
                         <br>
                         <br>
 
                         <button class="btn btn-outline-dark col-md-12 offset-md-1 rounded-pill" type="reset"
-                            id="resetBtn">Entrega en tienda <img src="./src/img/tienda.png" width="20px" alt="">
+                            onclick="EventoentregaaTien()" id="resetBtn">Entrega en tienda <img
+                                src="./src/img/tienda.png" width="20px" alt="">
                         </button>
                     </div>
                 </div>
+                <!--div row alingitems -->
+
             </div>
         </div>
     </section>
+
+
     <!----------formulario datos cliente para pago-------->
     <section>
+
         <div class="conteiner">
             <div class="row row-cols-2 ">
                 <div class="col px-md-5 ">
-                    <!--Agregue "px-md-5"  para separarlo del borde de la ventana  parecido9 al contendeor de del encabezado-->
-                    <form name="formulario" method="post" class="formulario-tarjeta needs-validation" novalidate>
-                        <div class="form-row d-flex justify-content-center ">
-                            <div class="form-group col-md-12">
-                                <label for="nombre">Nombre </label>
-                                <input type="text" class="form-control rounded-pill  " id="nombre"placeholder="Nombre completo" required>
-                                    <div class="valid-feedback">Dato válido</div>
-                                        <div class="invalid-feedback">Complete el campo</div>
+                    <div class="formulario">
+                        <!--Agregue "px-md-5"  para separarlo del borde de la ventana  parecido9 al contendeor de del encabezado-->
+                        <form name="formulario" method="post" class="formulario-tarjeta needs-validation" novalidate>
+                            <div class="form-row d-flex justify-content-center ">
+                                <div class="form-group col-md-12">
+                                    <label for="nombre">Nombre </label>
+                                    <input type="text" class="form-control rounded-pill  " id="nombre"
+                                        placeholder="Nombre completo" required>
+                                    <small id="passwordHelpBlock" class="form-text text-muted text-center ">
+                                        Escriba su nombre completo
+                                    </small>
 
-                                    
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress">Dirección</label>
-                            <input type="text" class="form-control rounded-pill" required id="inputAddress"
-                                placeholder="Agregue su dirección" >
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputCity">Ciudad</label>
-                                <input type="text" class="form-control rounded-pill" placeholder="Agregue su ciudad"
-                                    required id="inputCity" maxlength="35">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputZip">Código Postal</label>
-                                <input type="text" class="form-control rounded-pill" id="inputZip" maxlength="6"
-                                    placeholder="Agregue su código postal" required>
-                            </div>
-                        </div>
-                        <!-- ----Aqui va el checkbox de la foma de pago con tarjeta ---------->
 
-                        <input type="checkbox" name="check" id="check" value="1" onchange="showContent()">
-                        <label>Pago con tarjeta </label>
-
-                        <!-----------AQUI VA EL FORMULARIO DE PAGO POR TARJETA --------------->
-                        <div id="content">
-                            <div class="form ">
-                                <div class="form-group row form-inline mx-1">
-                                    <label for="numerotarjeta"> Número tarjeta
-                                    </label>
-                                    <input type="text" maxlength="16" name="tarjeta" id="numerotarjeta"
-                                        placeholder="Agregue el número de tarjeta "
-                                        class="form-control rounded-pill col-sm-12 mx-sm-2" required
-                                        autocomplete="off" >
                                 </div>
                             </div>
-                            <div class="grupo">
-                                <div class="form-group  form-inline mx-1">
-                                    <label for="inputNombre">Nombre</label>
-                                    <input type="text" id="inputNombre" maxlength="32"
-                                        placeholder="Agregue el nombre de la tarjeta"
-                                        class="form-control rounded-pill col-sm-12 mx-sm-2" required autocomplete="off">
+                            <div class="form-group">
+                                <label for="inputAddress">Dirección</label>
+                                <input type="text" class="form-control rounded-pill" required id="inputAddress"
+                                    placeholder="Agregue su dirección">
+                                <small id="passwordHelpBlock" class="form-text text-muted text-center">
+                                    Escriba su dirección
+                                </small>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">Ciudad</label>
+                                    <input type="text" class="form-control rounded-pill" placeholder="Agregue su ciudad"
+                                        required id="inputCity" maxlength="35">
+                                    <small id="passwordHelpBlock" class="form-text text-muted text-center">
+                                        Escriba su ciudad
+                                    </small>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputZip">Código Postal</label>
+                                    <input type="text" class="form-control rounded-pill" id="inputZip" maxlength="5"
+                                        placeholder="Agregue su código postal" required>
+                                    <small id="passwordHelpBlock" class="form-text text-muted text-center">
+                                        Escriba su código Postal
+                                    </small>
                                 </div>
                             </div>
-                            <div class="flexbox">
-                                <div class="grupo expira">
-                                    <label for="selectMes">Expiración</label>
-                                    <div class="flexbox">
-                                        <div class=" grupo-select " aria-required="true">
-                                            <select class="form-control rounded-pill col-sm-12" name="mes"
-                                                id="selectMes">
-                                                <option disabled selected>Mes</option>
-                                            </select>
-                                            <i class="fas fa-angle-down"></i>
 
-                                        </div>
-                                        <div class="grupo-select">
-                                            <select class="form-control rounded-pill col-sm-12" name="year"
-                                                id="selectYear">
-                                                <option disabled selected>Año</option>
-                                            </select>
-                                            <i class="fas fa-angle-down"></i>
-                                        </div>
+                            <!-- ----Aqui va el checkbox de la foma de pago con tarjeta ---------->
+
+                            <input type="checkbox" name="check" id="check" value="1" onchange="showContent()">
+                            <label>Pago con tarjeta </label>
+
+                            <!-----------AQUI VA EL FORMULARIO DE PAGO POR TARJETA --------------->
+                            <div id="content">
+                                <div class="form ">
+                                    <div class="form-group row form-inline mx-1">
+                                        <label for="numerotarjeta"> Número tarjeta
+                                        </label>
+                                        <input type="text" maxlength="16" name="tarjeta" id="numerotarjeta"
+                                            placeholder="Agregue el número de tarjeta "
+                                            class="form-control rounded-pill col-sm-12 mx-sm-2" required
+                                            autocomplete="off">
+                                        <small id="passwordHelpBlock"
+                                            class="form-text text-muted text-center justify-content-center center">
+                                            Escriba el número de su tarjeta
+                                        </small>
                                     </div>
                                 </div>
-                                <div class="grupo-ccv col-sm-5">
-                                    <label for="inputCCV">CCV</label>
-                                    <input class="form-control rounded-pill" type="text" id="inputCCV" maxlength="3"
-                                        placeholder="NIP de seguridad">
+                                <div class="grupo">
+                                    <div class="form-group  form-inline mx-1">
+                                        <label for="inputNombre">Nombre</label>
+                                        <input type="text" id="inputNombre" maxlength="32"
+                                            placeholder="Agregue el nombre completo de la tarjeta"
+                                            class="form-control rounded-pill col-sm-12 mx-sm-2" required
+                                            autocomplete="off">
+                                        <small id="passwordHelpBlock" class="form-text text-muted text-center center">
+                                            Escriba el nombre completa de la tarjeta
+                                        </small>
+                                    </div>
                                 </div>
+                                <div class="flexbox">
+                                    <div class="grupo expira p-3">
+                                        <label for="selectMes">Expiración</label>
+                                       
+                                        <div class="flexbox ">
+                                            <div class=" grupo-select align-items-center" aria-required="true">
+                                                <select class="form-control rounded-pill col-sm-12 center" name="mes"
+                                                    id="selectMes">
+                                                    <option disabled selected>Mes</option>
+                                                </select>
+                                                <i class="fas fa-angle-down"></i>
+
+                                            </div>
+                                            <div class="grupo-select">
+                                                <select class="form-control rounded-pill col-sm-12 center " name="year"
+                                                    id="selectYear">
+                                                    <option disabled selected>Año</option>
+                                                </select>
+                                                <i class="fas fa-angle-down"></i>
+                                            </div>
+                                           
+                                           
+                                        </div>
+                                         <small id="passwordHelpBlock"
+                                            class="form-text text-muted p-4 margenes text-center ">
+                                            Coloque los datos de expiración
+                                        </small>
+                                    </div>
+                                    <div class="grupo-ccv col-sm-5">
+                                        <label for="inputCCV">CCV</label>
+
+                                        <input class="form-control rounded-pill" type="text" id="inputCCV" maxlength="3"
+                                            placeholder="NIP de seguridad">
+                                        <small id="passwordHelpBlock" class="form-text text-muted  text-center center">
+                                            Coloque los 3 números de seguridad
+                                        </small>
+
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="center">
-                                <button type="submit"
+                            <br>
+                            <!------------    Aqui va el boton de paypal --------------------->
+                            <input type="checkbox" name="check2" id="check2" value="1" onchange="showContent2()">
+                            <label>Pago por PayPal</label>
+
+
+                            <div id="content2" class="center">
+                                <!---------------------AQUI VA EL OTRO METODO DE PAGO -------------------->
+                                <a href="https://www.paypal.com/mx/signin" target="_Blank"
                                     class=" form-control col-md-5 btn-enviar btn-outline-dark rounded-pill"
-                                    id="centrado-btn">Enviar</button>
+                                    id="centrado-btn" role="button" aria-pressed="true">PayPal</a>
+
                             </div>
-                        </div>
-                        <br>
-                        <!------------    Aqui va el boton de paypal --------------------->
-                        <input type="checkbox" name="check2" id="check2" value="1" onchange="showContent2()">
-                        <label>Pago por PayPal</label>
-
-
-                        <div id="content2" class="center">
-                            <!---------------------AQUI VA EL OTRO METODO DE PAGO -------------------->
-                            <a href="https://www.paypal.com/mx/signin" target="_Blank"
-                                class=" form-control col-md-5 btn-enviar btn-outline-dark rounded-pill"
-                                id="centrado-btn" role="button" aria-pressed="true">PayPal</a>
-
-                        </div>
+                    </div>
                     </form>
                 </div>
 
                 <!--------------- AQUÍ LA CONEXIÓN DEL CATALAGO PARA LA COMPRA --------------->
                 <div class="col">
                     <br>
-                    <div class="col d-flex p-3 aling-items-center">
+
+                    <div class="col d-flex p-3 aling-items-center text-center">
                         <h2 class="offset-md-2">
                             Detalles del pedido
                         </h2>
                     </div>
                     <div class="container">
-                        <div class="row aling aling-items-center">
-                            <div class="col">
-                                <img src="./src/img/tenis_mujer.png" width="100%" alt="">
+                        <div class="row  aling-items-center">
+                            <div class="col mb-5">
+                                <img  class=" tamañodeimagen" src="./src/img/imgCatalogo/tenis11.jpg" width="100%" alt="">
                             </div>
-                            <div class="col alin aling-items-center">
-                                <p> Calzado de mujer </p>
+                            <div class="col alin aling-items-center justify-content-center">
+                                <p class="pt-5"> Calzado de hombre: </p>
+                                <p> Running Retro</p>
                                 <p> Talla 26</p>
                                 <p><strong> $</strong> 1700.00</p>
                             </div>
-                            <br>
-                            <br>
-                            <br>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="row">
-                            <div class="col-12 col-md-10 justify-content-center align-items-center">
-                                <button class="btn btn-outline-dark col-md-8 offset-md-3 rounded-pill" type="reset"
-                                    id="resetBtn">Confirmar pedido </button>
-                            </div>
 
                         </div>
+                        <div class="center">
+                            <button type="submit" onclick="EventoAlert()"
+                                class=" form-control col-md-8 btn-enviar btn-outline-dark rounded-pill textomedia mb-5"
+                                id="centrado-btn">Confirmar pedido</button>
+                        </div>
+
                     </div>
-
                 </div>
                 <!--FORMULARIO-->
             </div>
