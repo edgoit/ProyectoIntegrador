@@ -19,4 +19,24 @@ footer{
 }
 .btn:hover{
     background: #561a50;
+    color: white;
+}
+/*cuadro del formulario*/
+form{
+    width: auto;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+}
+.formulario{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 8px #888888;
+}
+.separacion{
+    padding-top: 50px;
+}
+/*color del ancla o links*/
+a{
+    color:#5756a9;
 }
