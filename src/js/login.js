@@ -64,18 +64,12 @@ function validacionFormContraseña(t) {
 //Enviar el formulario
 function enviar_formulario(f) {
     f.preventDefault();
-    //Mostar el spinner
-   // const spinner = document.querySelector("#spinner");
-   // spinner.style.display = "flex";
-
-    // Despues de tres segundos ocultar el spinner
-    setTimeout(() => {
-       // spinner.style.display = "none";
+    
        let valorEmail = er.test(email.value);
        let valorContraseña = ert.test(contraseña.value);
 
         if(valorEmail == "" || valorContraseña == ""){
-       console.log(valorContraseña);
+      
         // mensaje que dice que la informacion de cotacto tiene errores
         Swal.fire({
             title: 'Error',
@@ -105,6 +99,6 @@ function enviar_formulario(f) {
         
     }
 
-    }, 3000);
+   
 
 }

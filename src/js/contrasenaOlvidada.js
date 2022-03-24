@@ -6,7 +6,7 @@ const btnRecordar = document.querySelector("#recordar");
 const er = /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
 
 //Declaramos variables que lleva el formulario 
-let email = document.getElementById("email")
+let email = document.getElementById("email");
 
 // se manda llamar la funcion evenListener
 eventListener();
@@ -18,7 +18,8 @@ function eventListener() {
     email.addEventListener("blur", validacionFormEmail);
     //continuar
     formulario.addEventListener("submit", recordar_contraseña);
-    
+
+
 }
 
 // Funcion validacionFormEmail donde pasa el foco de verde si hay datos en el input email o rojo  si no hay datos 
@@ -39,11 +40,17 @@ function validacionFormEmail(e) {
 
 }
 
+// validacion no permite ingresar mayusculas en input email
+formulario.email.addEventListener('keyup', (e) => {
+	let valorInput = e.target.value;
+
+	formulario.email.value = valorInput.replace(/[A-Z]/g, '');
+});
 
 //Enviar el formulario
 function recordar_contraseña(f) {
     f.preventDefault();
-    
+
        let valorEmail = er.test(email.value);
 
         if(valorEmail == ""){
@@ -57,21 +64,23 @@ function recordar_contraseña(f) {
         });
     }else{
             // mensaje que dice que el ingreso ha sido exitoso
-            function EventoAlert(){
-                Swal.fire({
-                    icon: 'success', 
-                    title: 'Exito',
-                    text: 'Se ha enviado un código',
-                    confirmButtonText: 'Continuar',
-                    confirmButtonColor: 'black'
-                
-              }).then((result)=>{
-                if(result.isConfirmed){
-                  location="./index.html"
-                }
-              })
-              }
+        Swal.fire({
+            icon: 'success', 
+            title: 'Exito',
+            text: 'Se ha enviado un código',
+            confirmButtonText: 'Continuar',
+            confirmButtonColor: 'black' 
+<<<<<<< HEAD:src/js/contrasenaOlvidada.js
+        });
+
+=======
+        }, function(){
+            window.location.href="http://login.html";
+          }
+        );
+
         
+>>>>>>> 6fc23c7a67b36e5099829bff5097d466440a2733:src/js/contraseñaOlvidada.js
     }
 
 

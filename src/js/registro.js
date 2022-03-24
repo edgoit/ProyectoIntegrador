@@ -67,7 +67,7 @@ formulario.telefono.addEventListener('keyup', (e) => {
 	formulario.telefono.value = valorInput.replace(/[a-zA-Z]/g, '');
 });
 
-// validacion no permite ingresar letras en input telefono
+// validacion no permite ingresar mayusculas en input email
 formulario.email.addEventListener('keyup', (e) => {
 	let valorInput = e.target.value;
 
@@ -178,13 +178,6 @@ function validarRegistro(){
 //Enviar el formulario
 function enviar_formulario(f) {
     f.preventDefault();
-  /*  //Mostar el spinner
-    const spinner = document.querySelector("#spinner");
-   spinner.style.display = "flex";
-
-    // Despues de tres segundos ocultar el spinner
-    setTimeout(() => {
-        spinner.style.display = "none";*/
        let valorNombre = ern.test(nombre.value);
        let valorTelefono = ert.test(telefono.value);
 
@@ -205,11 +198,11 @@ function enviar_formulario(f) {
             "telefono" : telefono.value,
             "contraseña" : contraseña.value
         }
-        console.log(newUser);
+        //console.log(newUser);
         usuariosRegistrados.push(newUser);
 
         let jsonUsuario = JSON.stringify(usuariosRegistrados);
-        console.log(typeof jsonUsuario);
+        //console.log(typeof jsonUsuario);
         localStorage.setItem("usersData", jsonUsuario);
        
         // mensaje que dice que el registro se hizo correctamente correctamente 

@@ -98,62 +98,59 @@
                         <button type="button" class="btn btn-dark btn_ingresar d-lg-none d-md-none">Ingresar</button>
                     </ul>
                 </div>
-                <a href="./login.html" type="button" class="btn btn-dark btn_ingresar d-none d-lg-block d-sm-none d-md-none col-lg-2">Ingresar</a>
+                <a href="./login.html" type="button" class="btn btn-dark btn_ingresar d-none d-lg-block d-sm-none d-md-none col-lg-2 rounded-pill">Ingresar</a>
             </nav>
         </section>    
     </header>
 
 
     <!--FORMULARIO  -->
-    <div class="container">
-        <br><br> <br>
-        <h2 class="text-center"><strong> ¡Bienvenidx!</strong></h2>
-        <br>
-        <h2 class="text-center">Iniciar sesión</h2>
-        <br><br>
-        <form id="form-registro-date">
-            <div class="form-row">
-                 <!-- Correo-->
-                <div class="form-group col-md-8 offset-md-2">
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" class="form-control rounded-pill fondo " id="email" 
-                    placeholder="ejemplo@alphateam.com" required>
-                    <small id="passwordHelpBlock" class="form-text text-muted">
-                        Escribe tu correo electrónico en minúsculas como se muestra en el ejemplo
-                    </small>
+    <div class="container mb-4">
+        
+        <h2 class="text-center separacion"><strong> ¡Bienvenidx!</strong></h2>
+
+        <div class="formulario col-md-8 offset-md-2 separacion">
+            <h2 class="text-center">Iniciar sesión</h2>
+            
+            <form id="form-registro-date" class="separacion">
+                <div class="form-row">
+                    <!-- Correo-->
+                    <div class="form-group col-md-12">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" class="form-control rounded-pill fondo " id="email" 
+                        placeholder="ejemplo@alphateam.com" required>
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                            Escribe tu correo electrónico en minúsculas como se muestra en el ejemplo
+                        </small>
+                    </div>
+                    <!--  Contraseña-->
+                    <div class="form-group col-md-12">
+                        <label for="inputPassword" >Contraseña</label>
+                        <input type="password" class="form-control rounded-pill fondo" id="contraseña"
+                        placeholder="Ingresa tu contraseña" required>
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                            Su contraseña debe tener entre 8 y 20 carácteres, al menos un carácter especial, una mayúscula, números y no debe contener espacios.
+                        </small>
+                    </div> 
+                    
+                    <div class="offset-md-1">
+                        <a href="./registro.html" class="col-md-1" >¿No tienes cuenta?</a>
+                    </div> 
+
+                    <div class="offset-md-1">  
+                    <button id="ingresar" class="btn btn-dark rounded-pill" role="button" aria-pressed="true">Ingresar</button> 
+                    </div>  
+
+                    <div class="offset-md-1">
+                        <a href="./contrasenaOlvidada.html" > ¿Olvidaste tu contraseña?</a>
+                    </div>
+                    
                 </div>
-                <!--  Contraseña-->
-                <div class="form-group col-md-8 offset-md-2">
-                    <label for="inputPassword" >Contraseña</label>
-                    <input type="password" class="form-control rounded-pill fondo" id="contraseña"
-                    placeholder="Ingresa tu contraseña" required>
-                    <small id="passwordHelpBlock" class="form-text text-muted">
-                        Su contraseña debe tener entre 8 y 20 carácteres, al menos un carácter especial, una mayúscula, números, y no debe contener espacios.
-                    </small>
-                </div> 
-                
-                <div class="offset-md-2">
-                    <a href="./registro.html" class="col-md" >¿No tienes cuenta?</a>
-                </div> 
-                     
-                <button id="ingresar" class="btn btn-dark col-md-3 rounded-pill" role="button" aria-pressed="true">Ingresar</button> 
-                
-                <div>
-                    <a href="./contraseñaOlvidada.html" class="col-md" >¿Olvidaste tu contraseña?</a>
-                </div>
-                
-            </div>
-            <br><br>
-            <div>
-                <button id="spinner" style="display: none;" class="btn btn-dark offset-md-5" type="submit">
-                    Loading...
-                <span class="spinner-grow spinner-grow-sm" role="status"></span>
-                </button>
-            </div>
+        </div>
+            
         </form>
     </div>
     <!--modificar el br por padding-->
-    <br><br><br><br><br>
   
      <!-- Footer -->
      <footer>       
@@ -315,24 +312,6 @@
     </footer>
     <!-- Footer -->
 
-    <!-- <footer>
-        <div class="container-flex ">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-              <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                  <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-                </a>
-                <span class="text-muted">© Alpha Team, 2022</span>
-              </div>
-          
-              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-              </ul>
-            </footer>
-          </div>
-    </footer> -->
 
     <!-- Script bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
