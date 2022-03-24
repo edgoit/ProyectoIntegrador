@@ -1,7 +1,19 @@
 const form = document.getElementById("formulario");
 
 
-arrayProductos = [];
+arrayProductos = [
+    {
+        'id' : 1,
+        'img': './src/img/imgCatalogo/tenis4.jpeg',
+        'name': 'Life Style Arcoiris-fx',
+        'marca': 'Nike',
+        'categoria' : 'life-style',
+        'description' : 'Hola a todos',
+        'cantidad' : 5, 
+        'talla' : 26.5,
+        'precio':'$500.00 MXN'
+    }
+];
 
 
 form.addEventListener("submit",e =>{
@@ -14,9 +26,7 @@ form.addEventListener("submit",e =>{
     let talla = document.getElementById("talla");
     let cantidad = document.getElementById("cantidad");
     let precio = document.getElementById("precio");
-    
-    console.log(marca.value);
-    console.log(descripcion.value);
+
 
     let nuevoProducto = 
     {
@@ -29,9 +39,9 @@ form.addEventListener("submit",e =>{
         "cantidad" : cantidad.value,
         "precio" : parseInt(precio.value)
     }
+    
     arrayProductos.push(nuevoProducto);
 
     let jsonProducto = JSON.stringify(arrayProductos);
-    console.log(typeof jsonProducto);
     localStorage.setItem("productsData", jsonProducto);
 });

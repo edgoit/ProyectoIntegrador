@@ -12,3 +12,82 @@
 .nom-categ h1{
     text-align: center;
 }
+
+.cards-product
+{
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    width: 22rem;
+    height: 22rem;
+}
+
+.card-name
+{
+    display: flex;
+    justify-content: space-between;
+    text-align:left;
+    vertical-align: bottom;
+}
+
+.card-cont
+{
+    height: 200px;
+}
+
+.card-img
+{
+    object-fit:scale-down;
+    overflow: hidden;
+}
+
+.card-precio
+{
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+}
+
+.comprar-icon
+{
+    vertical-align: bottom;
+    text-align: right;
+    color:green;
+    font-size: 2rem;
+}
+
+.card-marca
+{
+    background-color: black;
+    height: fit-content;
+}
+
+/*
+flip card
+*/
+.card-flip > div {
+    backface-visibility: hidden;
+    transition: transform 300ms;
+    transition-timing-function: linear;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+  }
+  
+  .card-front {
+    transform: rotateY(0deg);
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+  }
+  
+  .card-flip:hover .card-front {
+    transform: rotateY(-180deg);
+  }
+    
+  .card-flip:hover .card-back {
+    transform: rotateY(0deg);
+  }
