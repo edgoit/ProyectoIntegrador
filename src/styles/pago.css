@@ -6,11 +6,8 @@
 
 .formulario-tarjeta input {
   margin-bottom: 20px;
-  /* text-transform: uppercase; */
+  
 }
-/* .formulario-tarjeta input::placeholder{
-  text-transform: lowercase;
-} */
 
 .formulario-tarjeta .flexbox {
   display: flex;
@@ -90,7 +87,7 @@
   }
  
 }
-
+/*        hasta aqui termina los medio*/
 .btn-enviar {
   margin-top: -5% !important;
 }

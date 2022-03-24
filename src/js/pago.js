@@ -40,8 +40,6 @@ formulario.inputcodigo.addEventListener('keyup', () => {
 
 	ccv.textContent = formulario.inputcodigo.value;
 });
-
-
 ///////////valida la funcion de numero de tarjetas( solo permitira colocar numeros ) /////////////
 
 window.addEventListener("load", function () {
