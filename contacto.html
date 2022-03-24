@@ -20,6 +20,8 @@
     <!-- css-styles -->
     <link rel="stylesheet" href="./src/styles/stylesNosotros.css">
     <link rel="stylesheet" href="./src/styles/contacto.css">
+     <!-- css de footer-->
+     <link rel="stylesheet" href="./src/styles/formularioLogin.css">
 </head>
 
 <body>
@@ -78,15 +80,6 @@
                             <a class="dropdown-item" href="mujerSkate.html">Skateboarding</a>
                         </ul>
                         </li>
-                        <!-- <li class="dropdown-submenu d-lg-none"><a class="dropdown-item dropdown-toggle test"
-                                        data-toggle="dropdown" href="#">Ayuda y configuración</a>
-                                    <ul class="dropdown-menu">
-                                        <a class="dropdown-item" href="contacto.html">Contáctanos</a>
-                                        <a class="dropdown-item" href="registro.html">Registro</a>
-                                        <a class="dropdown-item" href="login.html">Login</a>
-                                        <a class="dropdown-item" href="#">Salir</a>
-                                    </ul>
-                                </li> -->
                     </ul>
 
                     </li>
@@ -110,7 +103,7 @@
     <img src="./src/img/contacto.png" alt="" width="100%">
 
     <!--FORMULARIO  -->
-    <div class="container">
+    <div class="container bordeformulario">
 
         <form id="form-registro-date" name="formulario">
             <div class="form-row">
@@ -120,7 +113,7 @@
                     <input type="text" class="form-control rounded-pill fondo " id="nombre" name="nombre"
                         placeholder="Alpha Team" required>
                     <small id="passwordHelpBlock" class="form-text text-muted text-center">
-                        Escribe tu nombre, no se aceptan números.
+                        Escribe un nombre, no se aceptan números.
                     </small>
                 </div>
                 <div class="form-group col-md-8  offset-md-2">
@@ -134,9 +127,9 @@
                 <div class="form-group col-md-8  offset-md-2">
                     <label for="telefono">Teléfono</label>
                     <input type="text" class="form-control rounded-pill fondo " id="telefono" name="telefono"
-                        placeholder="5523438976" required>
+                        placeholder="+525523438976" required>
                     <small id="passwordHelpBlock" class="form-text text-muted text-center">
-                        Escribe tu teléfono a 10 dígitos, registrar un teléfono a la vez.
+                        Escribe tu teléfono a 10 dígitos (opcional el símbolo + y ladas).
                     </small>
                 </div>
                 <!-- cuadro de texto-->
@@ -149,30 +142,13 @@
                     <small id="passwordHelpBlock" class="form-text text-muted text-center">
                         Escríbenos sobre alguna duda o sugerencia que tengas, no lo dejes vacío.
                     </small>
-                    <!--<div class="invalid-feedback">
-                        Por favor agregue su mensaje.
-                    </div>-->
                 </div>
 
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-md-4">
-
-                    </label>
-                </div>
             </div>
             <div>
-                <button id="spinner" style="display: none;" class="btn btn-dark offset-md-5" type="submit">
-                    Loading...
-                    <span class="spinner-grow spinner-grow-sm" role="status"></span>
-                </button>
                 <br><br>
                 <button id="enviar" class="btn btn-dark col-md-3 offset-md-2 col-3 offset-2 rounded-pill" role="button"
                     aria-pressed="true">Enviar</button>
-                <!--html: "<form action=\"mailto:ourclub.alpha@gmail.com?subject=form-registro-date%20pag%20Web\" method=\"post\" enctype=\"text/plain\"><input type=\"submit\" value=\"Enviar email\"></form>",-->
-                <!-- <button id="enviar" class="btn btn-dark col-md-2 offset-md-3 rounded-pill" role="button" aria-pressed="true">-->
-                <!--</button>-->
                 <button class="btn btn-outline-dark col-md-3 offset-md-2 col-3 offset-2 rounded-pill" type="reset"
                     id="resetBtn">Limpiar</button>
             </div>
@@ -338,24 +314,6 @@
     </footer>
     <!-- Footer -->
 
-    <!-- <footer>
-    <div class="container-flex ">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-            <span class="text-muted">© Alpha Team, 2022</span>
-          </div>
-      
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-          </ul>
-        </footer>
-      </div>
-</footer> -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

@@ -70,8 +70,17 @@ function recordar_contraseña(f) {
             text: 'Se ha enviado un código',
             confirmButtonText: 'Continuar',
             confirmButtonColor: 'black' 
+<<<<<<< HEAD:src/js/contrasenaOlvidada.js
         });
 
+=======
+        }, function(){
+            window.location.href="http://login.html";
+          }
+        );
+
+        
+>>>>>>> 6fc23c7a67b36e5099829bff5097d466440a2733:src/js/contraseñaOlvidada.js
     }
 
 
