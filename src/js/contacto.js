@@ -109,7 +109,7 @@ function validacionFormTelefono(t) {
             t.target.classList.add("is-invalid");
             Swal.fire({
                 title: 'Error',
-                text: 'Escribe un teléfono, con símbolo + y ladas, ejemplo: +523323114000.',
+                text: 'Escribe tu teléfono a 10 dígitos (opcional el símbolo + y ladas), ejemplo: +523323114000.',
                 icon: 'Danger',
                 confirmButtonText: 'Continuar',
                 confirmButtonColor: 'black'
@@ -174,9 +174,12 @@ formulario.telefono.addEventListener('keyup', (e) => {
 function enviar_formulario(f) {
     f.preventDefault();
     let valorNombre = ern.test(nombre.value);
+    let valorEmail = er.test(email.value);
     let valorTelefono = ert.test(telefono.value);
+    let valorMensaje = erm.test(mensaje.value);
+    
 
-    if (valorNombre == "" || valorTelefono == "") {
+    if (valorNombre == false || valorEmail == false || valorTelefono == false || valorMensaje == false) {
         // mensaje que dice que la informacion de registro tiene errores
         Swal.fire({
             title: 'Error',
