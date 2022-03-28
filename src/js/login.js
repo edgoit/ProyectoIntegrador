@@ -21,7 +21,7 @@ function ingresar() {
 
   for (let i = 0; i < arrayUsuarios.length; i++) {
     if (arrayUsuarios[i].email == email2.value) {
-      if (arrayUsuarios[i].contrasena == contrasena.value) {
+      if (arrayUsuarios[i].contrasena == contrasena2.value) {
         Swal.fire({
           icon: "success",
           title: "Exito",
@@ -33,21 +33,31 @@ function ingresar() {
             location = "hombreFutbol.html";
           }
         });
-      }else {
-       
+        flag = true;
+        break;
+      } else {
         Swal.fire({
           title: "Error",
-          text: "Los datos de acceso son incorrectos",
+          text: "contraseña incorrecta, trate nuevamente ",
           icon: "warning",
           confirmButtonText: "Regresar",
           confirmButtonColor: "black",
-        });  
-      }
+        });
+        flag = true;
+        break;
       }
     }
   }
-
-
+  if (flag == false) {
+    Swal.fire({
+      title: "Error",
+      text: "Correo o contraseña incorrectos, trate nuevamente ",
+      icon: "warning",
+      confirmButtonText: "Regresar",
+      confirmButtonColor: "black",
+    });
+  }
+}
 // expresiones regulares para  validar email y contraseña.
 const er =
   /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
