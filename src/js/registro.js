@@ -3,6 +3,32 @@ const formulario = document.getElementById("form-registro-date");
 const btnReset = document.getElementById("resetBtn");
 const btnEnviar = document.querySelector("#enviar");
 
+// decalramos eel arreglo para el local storage
+let arrayUsuario = [];
+
+//agregamos la funcion para enviar los datos del registro al localStorage
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+  
+    let email = document.getElementById("email").value;
+    let usuario = document.getElementById("usuario").value;
+    let contrasena = document.getElementById("contrasena").value;
+    let rol = document.getElementById("rol").value;
+    let cliente = {
+      'email' : email,
+      'usuario' : usuario,
+      'contrasena' : contrasena,
+      'rol' : rol
+    };
+  
+    arrayUsuario.push(cliente);
+    let json = JSON.stringify(arrayUsuario);
+    localStorage.setItem("usersData", json);
+    console.log("cliente agregado");
+  });
+  
+
+
 // expresiones regulares para  validar nombre, email, telefono, y contraseña
 const ern = /[a-zA-Z]/;
 const er = /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
@@ -11,11 +37,11 @@ const erc=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|
 
 
 //Declaramos variables que lleva el formulario 
-let nombre = document.getElementById("nombre");
+let usuario = document.getElementById("usuario");
 let email = document.getElementById("email");
 let telefono = document.getElementById("telefono");
-let contraseña = document.getElementById("contraseña");
-let contraseña2 = document.getElementById("contraseña2");
+let contrasena = document.getElementById("contrasena");
+let contrasena2 = document.getElementById("contrasena2");
 let comparacion = false;
 
 
@@ -27,11 +53,11 @@ eventListener();
 function eventListener() {
     // cuando el formulario arranca
     //document.addEventListener("DOMContentLoaded", iniciarForm);
-    nombre.addEventListener("blur", validacionFormNombre);
+    usuario.addEventListener("blur", validacionFormNombre);
     email.addEventListener("blur", validacionFormEmail);
     telefono.addEventListener("blur", validacionFormTelefono);
-    contraseña.addEventListener("blur", validacionFormContraseña);
-    contraseña2.addEventListener("blur", validacionFormContraseña2);
+    contrasena.addEventListener("blur", validacionFormContrasena);
+    contrasena2.addEventListener("blur", validacionFormContrasena2);
     //enviar formulario
     formulario.addEventListener("submit", enviar_formulario);
 }
@@ -54,10 +80,10 @@ function validacionFormNombre(n) {
 }
 
 // validacion no permite ingresar numeros en input nombre
-formulario.nombre.addEventListener('keyup', (e) => {
+formulario.usuario.addEventListener('keyup', (e) => {
 	let valorInput = e.target.value;
 
-	formulario.nombre.value = valorInput.replace(/[0-9]/g, '');
+	formulario.usuario.value = valorInput.replace(/[0-9]/g, '');
 });
 
 // validacion no permite ingresar letras en input telefono
@@ -114,7 +140,7 @@ function validacionFormTelefono(t) {
 
 
 // Funcion validacionFormContraseña donde pasa el foco de verde si hay datos en el input telefono o rojo  si no hay datos 
-function validacionFormContraseña(c) {
+function validacionFormContrasena(c) {
     if (c.target.type === "password") {
 
         if (erc.test(c.target.value)) {
@@ -133,7 +159,7 @@ function validacionFormContraseña(c) {
 }
 
 // Funcion validacionFormContraseña2 donde pasa el foco de verde si hay datos en el input telefono o rojo  si no hay datos 
-function validacionFormContraseña2(c2) {
+function validacionFormContrasena2(c2) {
     if (c2.target.type === "password") {
 
         if (erc.test(c2.target.value)) {
@@ -154,8 +180,8 @@ function validacionFormContraseña2(c2) {
 
 //Función que compara si las contraseñas ingresadas coinciden
 function validarRegistro(){
-    var password = document.querySelector("#contraseña").value;
-    var password2 = document.querySelector("#contraseña2").value;
+    var password = document.querySelector("#contrasena").value;
+    var password2 = document.querySelector("#contrasena2").value;
     //console.log("contraseña", password);
     //console.log("contraseña2", password2);
     if (password != password2) {
@@ -178,7 +204,7 @@ function validarRegistro(){
 //Enviar el formulario
 function enviar_formulario(f) {
     f.preventDefault();
-       let valorNombre = ern.test(nombre.value);
+       let valorNombre = ern.test(usuario.value);
        let valorTelefono = ert.test(telefono.value);
 
         if(valorNombre == "" || valorTelefono == "" || comparacion == false){
@@ -193,10 +219,10 @@ function enviar_formulario(f) {
     }else{
 
         let newUser = {
-            "name" : nombre.value,
+            "usuario" : usuario.value,
             "email" : email.value,
             "telefono" : telefono.value,
-            "contraseña" : contraseña.value
+            "contrasena" : contrasena.value
         }
         //console.log(newUser);
         usuariosRegistrados.push(newUser);
@@ -211,7 +237,11 @@ function enviar_formulario(f) {
             title: 'Registro exitoso',
             confirmButtonText: 'Continuar',
             confirmButtonColor: 'black' 
-        });
+        }).then((result)=>{
+            if(result.isConfirmed){
+              location="login.html"
+            }
+          });
         
     }
 
@@ -223,9 +253,9 @@ function enviar_formulario(f) {
 //Reinicia el formulario 
 formulario.addEventListener("reset", (e) => {
     e.preventDefault();
-    nombre.value = "";
+    usuario.value = "";
     email.value = "";
     telefono.value = "";
-    contraseña.value = "";
-    contraseña2.value = "";
+    contrasena.value = "";
+    contrasena2.value = "";
 });
