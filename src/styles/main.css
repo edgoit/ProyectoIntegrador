@@ -1,0 +1,120 @@
+:root
+{
+    --myfont: 'Montserrat', sans-serif;
+    --myweight : 800; 
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+/*==========================NAVBAR STYLES==========================*/
+.nav-style
+{
+    /* background: rgb(238,238,238);
+    background: linear-gradient(33deg, rgba(238,238,238,1) 9%, rgba(101,237,206,1) 38%, rgba(125,145,193,1) 66%, rgba(215,52,199,1) 100%);  */
+
+    /* bg bueno*/
+    /* background: rgb(59,213,189);
+    background: linear-gradient(33deg, rgba(59,213,189,1) 0%, rgba(125,145,193,1) 66%, rgba(215,52,199,1) 100%);  */
+    
+    /* background: rgb(59,213,189);
+    background: linear-gradient(48deg, rgba(59,213,189,1) 0%, rgba(125,145,193,1) 35%, rgba(215,52,199,1) 100%);  */
+
+    /* bg color index 1 =========*/
+    background: rgb(93,154,200);
+    background: linear-gradient(164deg, rgba(93,154,200,1) 0%, rgba(245,109,144,1) 100%); 
+
+    /* bg color index 2 */
+    /* background: rgb(86,26,80);
+    background: linear-gradient(164deg, rgba(86,26,80,1) 0%, rgba(204,89,125,1) 100%);  */
+
+    /* background: rgb(158,144,189);
+    background: linear-gradient(164deg, rgba(158,144,189,1) 0%, rgba(245,109,144,1) 100%);  */
+}
+
+.nav-item
+{
+    padding-left: 2vw;
+}
+
+.div-table-styles{
+    background-color: transparent;
+    border-style: none;
+}
+
+
+.table-style
+{
+    background: rgba(255, 255, 255, 0.89);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.ico-nav
+{
+    margin: auto 5px;
+    color: white;
+    font-size: 24px;
+}
+
+.btn-hdr {
+    width: 100%;
+    height: 3rem;
+    border-color: rgba(215,52,199,1);
+    border-radius: 5px;
+    color: rgba(215,52,199,1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+}
+
+.btn-hdr:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: rgba(215,52,199,1);
+    z-index: -1;
+    -webkit-transition: width 150ms ease-in-out;
+    transition: width 150ms ease-in-out;
+}
+
+.btn-hdr:hover {
+    color: #fff;
+}
+
+.btn-hdr:hover:after {
+    width: 110%;
+}
+
+/*=================================================================*/
+/*==========================FOOTER STYLES==========================*/
+footer
+{
+    color: white;
+    background: rgb(158,144,189);
+    background: linear-gradient(185deg, rgba(158,144,189,1) 0%, rgba(245,109,144,1) 100%); 
+}
+
+footer a
+{
+    color: white;
+}
+/*=================================================================*/

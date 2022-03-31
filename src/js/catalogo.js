@@ -4,34 +4,24 @@ let arrat = JSON.parse(productStorage);
 function addItem(item) 
 {
     const itemHTML = ` 
-    <div class="container-fluid col-md-4 py-4">
-        <div class="card card-flip card-cont">
-            <div class="card-front text-white">
-                <div class="card-body p-0 card-img">
-                    <img src="${item.img}" class="card-img" alt="..." >
+    <div class="col-lg-6 py-3">
+        <div class="card mb-3 card-catalogo">
+            <div class="row no-gutters">
+                <div class="col-lg-8" style="height:300px;">
+                    <img src="${item.img}" alt="..." class="img-card">
                 </div>
-                <div class="card-img-overlay card-name py-0">
-                    <h5 class="card-title card-nombre p-1"> ${item.nombre}  </h5> 
-                    <p class="card-text card-marca p-1"> ${item.marca}  </p> 
+                <div class="col-md-4">
+                    <div class="card-body" style="height:100%;">
+                        <h3 class="card-title">${item.marca}</h3>
+                        <h5 class="card-text">${item.nombre}</h5>
+                        <p class="card-text m-0"><small class="text-muted"><span class="font-weight-bold">Categoria:</span> ${item.categoria}</small></p>
+                        <p class="card-text m-0"><small class="text-muted"><span class="font-weight-bold">Descripción:</span> ${item.descripcion}</small></p>
+                        <p class="card-text m-0"><small class="text-muted"><span class="font-weight-bold">Cantidad:</span> ${item.cantidad}</small></p>
+                        <p class="card-text m-0"><small class="text-muted"><span class="font-weight-bold">Talla:</span> ${item.talla}</small></p>
+                        <button class="btn btn-outline-secondary mt-3" style="">${item.precio}</button>
+                        <!--<p class="card-text"><small class="text-muted"></small></p>-->
+                    </div>
                 </div>
-            </div>
-            <div class="card-back bg-white">
-            <div class="row">
-                <div class="col-md-6">
-                <div class="card-body cards-product">
-                    
-                    <p class="card-text card-categoria"> ${item.categoria}  </p> 
-                    <p class="card-text card-descripcion">  ${item.descripcion}  </p> 
-                    <p class="card-text card-cantidad"> ${item.cantidad}  </p>
-                    <p class="card-text card-talla"> ${item.talla}  </p> 
-                </div>
-                </div>
-                <div class="col-md-6 card-precio">
-                    <p class="card-text font-weight-bold card-precio">  ${item.precio} </p>
-                    <a href="pago.html"><i class="bi bi-cash comprar-icon"></i></a>
-                </div>
-            </div>
-                
             </div>
         </div>
     </div>
@@ -50,11 +40,11 @@ function addStorage()
         <div class="card card-flip card-cont">
             <div class="card-front text-white">
                 <div class="card-body p-0 card-img">
-                    <img src="${item.img}" class="card-img" alt="..." >
+                    <img src="${element.img}" class="card-img" alt="..." >
                 </div>
                 <div class="card-img-overlay card-name py-0">
-                    <h5 class="card-title card-nombre p-1"> ${item.nombre}  </h5> 
-                    <p class="card-text card-marca p-1"> ${item.marca}  </p> 
+                    <h5 class="card-title card-nombre p-1"> ${element.nombre}  </h5> 
+                    <p class="card-text card-marca p-1"> ${element.marca}  </p> 
                 </div>
             </div>
             <div class="card-back bg-white">
@@ -62,14 +52,14 @@ function addStorage()
                 <div class="col-md-6">
                 <div class="card-body cards-product">
                     
-                    <p class="card-text card-categoria"> ${item.categoria}  </p> 
-                    <p class="card-text card-descripcion">  ${item.descripcion}  </p> 
-                    <p class="card-text card-cantidad"> ${item.cantidad}  </p>
-                    <p class="card-text card-talla"> ${item.talla}  </p> 
+                    <p class="card-text card-categoria"> ${element.categoria}  </p> 
+                    <p class="card-text card-descripcion">  ${element.descripcion}  </p> 
+                    <p class="card-text card-cantidad"> ${element.cantidad}  </p>
+                    <p class="card-text card-talla"> ${element.talla}  </p> 
                 </div>
                 </div>
                 <div class="col-md-6 card-precio">
-                    <p class="card-text card-precio">  ${item.precio} </p>
+                    <p class="card-text card-precio">  ${element.precio} </p>
                     <a href="pago.html"><i class="bi bi-cash comprar-icon"></i></a>
                 </div>
             </div>
