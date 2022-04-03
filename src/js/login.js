@@ -25,7 +25,7 @@ function ingresar() {
         Swal.fire({
           icon: "success",
           title: "Exito",
-          text: "Nos alegra tenerte devuelta",
+          text: "Nos alegra tenerte devuelta.",
           confirmButtonText: "Continuar",
           confirmButtonColor: "black",
         }).then((result) => {
@@ -38,7 +38,7 @@ function ingresar() {
       } else {
         Swal.fire({
           title: "Error",
-          text: "contraseña incorrecta, trate nuevamente ",
+          text: "Contraseña incorrecta, trate nuevamente.",
           icon: "warning",
           confirmButtonText: "Regresar",
           confirmButtonColor: "black",
@@ -51,7 +51,7 @@ function ingresar() {
   if (flag == false) {
     Swal.fire({
       title: "Error",
-      text: "Correo o contraseña incorrectos, trate nuevamente ",
+      text: "Correo o contraseña incorrectos, trate nuevamente.",
       icon: "warning",
       confirmButtonText: "Regresar",
       confirmButtonColor: "black",
@@ -91,6 +91,13 @@ function validacionFormEmail(e) {
       //mostrarError("El email no es valido");
       e.target.classList.remove("is-valid");
       e.target.classList.add("is-invalid");
+      Swal.fire({
+        title: 'Error',
+        text: 'Escribe un correo electrónico válido. Ejemplo:alpha@gmail.com.',
+        icon: 'warning',
+        confirmButtonText: 'Continuar',
+        confirmButtonColor: 'black'
+    });
     }
   }
 }
@@ -105,42 +112,14 @@ function validacionFormContraseña(t) {
       //mostrarError
       t.target.classList.remove("is-valid");
       t.target.classList.add("is-invalid");
+      Swal.fire({
+        title: 'Error',
+        text: 'Ingresa una contraseña válida.',
+        icon: 'warning',
+        confirmButtonText: 'continuar',
+        confirmButtonColor: 'black'
+    });
     }
   }
-  // }
 
-  // //Enviar el formulario
-  // function enviar_formulario(f) {
-  //   f.preventDefault();
-
-  //   let valorEmail = er.test(email.value);
-  //   let valorContraseña = ert.test(contrasena.value);
-
-  //   if (valorEmail == "" || valorContraseña == "") {
-  //     // mensaje que dice que la informacion de cotacto tiene errores
-  //     Swal.fire({
-  //       title: "Error",
-  //       text: "Los datos de acceso son incorrectos",
-  //       icon: "warning",
-  //       confirmButtonText: "Regresar",
-  //       confirmButtonColor: "black",
-  //     });
-  //   } else {
-  //     // mensaje que dice que el ingreso ha sido exitoso
-
-  //     function EventoAlert() {
-  //       Swal.fire({
-  //         icon: "success",
-  //         title: "Exito",
-  //         text: "Nos alegra tenerte devuelta",
-  //         confirmButtonText: "Continuar",
-  //         confirmButtonColor: "black",
-  //       }).then((result) => {
-  //         if (result.isConfirmed) {
-  //           location = "index.html";
-  //         }
-  //       });
-  //     }
-  //   }
-  // }
 }

@@ -33,6 +33,13 @@ function validacionFormEmail(e) {
             //mostrarError("El email no es valido");
             e.target.classList.remove("is-valid");
             e.target.classList.add("is-invalid");
+            Swal.fire({
+                title: 'Error',
+                text: 'Escribe un correo electrónico válido. Ejemplo:alpha@gmail.com.',
+                icon: 'warning',
+                confirmButtonText: 'Continuar',
+                confirmButtonColor: 'black'
+            });
 
         }
 
@@ -80,6 +87,7 @@ function recordar_contrasena(evento) {
 
 
 }
+
 
 
 
