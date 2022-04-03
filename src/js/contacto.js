@@ -6,7 +6,7 @@ const btnEnviar = document.querySelector("#enviar");
 
 
 // expresiones regulares para  validar nombre, email, telefono, y mensaje
-const ern = /^[a-zA-Z ]{2,50}$/;
+const ern = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]{2,50}$/;
 const er = /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
 const ert = /^(\(?\+?[\d]{1,3}\)?)\s?([\d-]{1,3})\s?([\d][\s\.-]?){6,8}$/;
 const erm = /^[^\W\s\d][a-zA-Z0-9?$@#()'!,+\-=_:.&€£*%\sÑñáéíóúÁÉÍÓÚ]+$/;
@@ -58,8 +58,8 @@ function validacionFormNombre(n) {
             n.target.classList.add("is-invalid");
             Swal.fire({
                 title: 'Error',
-                text: 'Escribe un nombre, no se aceptan números.',
-                icon: 'Danger',
+                text: 'Escribe un nombre correcto.',
+                icon: 'warning',
                 confirmButtonText: 'continuar',
                 confirmButtonColor: 'black'
             });
@@ -83,8 +83,8 @@ function validacionFormEmail(e) {
             e.target.classList.add("is-invalid");
             Swal.fire({
                 title: 'Error',
-                text: 'Escribe un correo electrónico con un @ y un punto, ejemplo: alpha@gmail.com.',
-                icon: 'Danger',
+                text: 'Escribe un correo electrónico válido. Ejemplo:alpha@gmail.com.',
+                icon: 'warning',
                 confirmButtonText: 'Continuar',
                 confirmButtonColor: 'black'
             });
@@ -110,7 +110,7 @@ function validacionFormTelefono(t) {
             Swal.fire({
                 title: 'Error',
                 text: 'Escribe tu teléfono a 10 dígitos (opcional el símbolo + y ladas), ejemplo: +523323114000.',
-                icon: 'Danger',
+                icon: 'warning',
                 confirmButtonText: 'Continuar',
                 confirmButtonColor: 'black'
             });
@@ -141,8 +141,8 @@ function validacionFormMensaje(m) {
             document.getElementById("enviar").style.pointerEvents = "none";
             Swal.fire({
                 title: 'Error',
-                text: 'Escríbenos sobre alguna duda o sugerencia que tengas.',
-                icon: 'Danger',
+                text: 'Recuerda escribir un mensaje.',
+                icon: 'warning',
                 confirmButtonText: 'Continuar',
                 confirmButtonColor: 'black'
             });
@@ -184,7 +184,7 @@ function enviar_formulario(f) {
         Swal.fire({
             title: 'Error',
             text: 'La información de registro contiene errores',
-            icon: 'Danger',
+            icon: 'warning',
             confirmButtonText: 'Continuar',
             confirmButtonColor: 'black'
         });
@@ -193,19 +193,27 @@ function enviar_formulario(f) {
 
         Swal.fire({
             icon: 'success',
-            title: 'Registro exitoso',
-            confirmButtonText: 'Continuar',
+            confirmButtonText: 'Enviar correo',
             confirmButtonColor: 'black',
 
         }).then((result) => {
+            // Una vez que confirma que los datos son correctos, lo carga en el correo.
             if (result.isConfirmed) {
-                location = "mailto:ourclub.alpha@gmail.com?subject=Me%20gustan%20sus%20productos";
+                const nombre1 = document.getElementById('nombre').value;
+                const email1 = document.getElementById('email').value;
+                const telefono1 = document.getElementById('telefono').value;
+                const mensaje1 = document.getElementById('mensaje').value;
+                window.location.href=`mailto:ourclub.alpha@gmail.com?subject=Envío%20desde%20formulario&body=Nombre%3A%20${nombre1}%0ACorreo%3A%20${email1}%0ATel%C3%A9fono%3A%20${telefono1}%0AMensaje%3A%20${mensaje1}`;
             }
         });
 
     }
 
 }
+
+
+
+
 
 
 

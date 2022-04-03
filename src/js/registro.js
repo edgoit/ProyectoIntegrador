@@ -30,7 +30,7 @@ formulario.addEventListener("submit", (e) => {
 
 
 // expresiones regulares para  validar nombre, email, telefono, y contraseña
-const ern = /[a-zA-Z]/;
+const ern = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]{2,50}$/;
 const er = /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
 const ert = /^(\(?\+?[\d]{1,3}\)?)\s?([\d-]{1,3})\s?([\d][\s\.-]?){6,8}$/;
 const erc=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,20}$/;
@@ -73,6 +73,13 @@ function validacionFormNombre(n) {
             //mostrarError("El email no es valido");
             n.target.classList.remove("is-valid");
             n.target.classList.add("is-invalid");
+            Swal.fire({
+                title: 'Error',
+                text: 'Escribe un nombre correcto.',
+                icon: 'warning',
+                confirmButtonText: 'continuar',
+                confirmButtonColor: 'black'
+            });
 
         }
 
@@ -111,7 +118,13 @@ function validacionFormEmail(e) {
             //mostrarError("El email no es valido");
             e.target.classList.remove("is-valid");
             e.target.classList.add("is-invalid");
-
+            Swal.fire({
+                title: 'Error',
+                text: 'Escribe un correo electrónico válido. Ejemplo:alpha@gmail.com.',
+                icon: 'warning',
+                confirmButtonText: 'Continuar',
+                confirmButtonColor: 'black'
+            });
         }
 
     }
@@ -131,6 +144,14 @@ function validacionFormTelefono(t) {
             //mostrarError("El email no es valido");
             t.target.classList.remove("is-valid");
             t.target.classList.add("is-invalid");
+            Swal.fire({
+                title: 'Error',
+                text: 'Escribe tu teléfono a 10 dígitos (opcional el símbolo + y ladas), ejemplo: +523323114000.',
+                icon: 'warning',
+                confirmButtonText: 'Continuar',
+                confirmButtonColor: 'black'
+            });
+        
 
         }
 
@@ -152,6 +173,13 @@ function validacionFormContrasena(c) {
 
             c.target.classList.remove("is-valid");
             c.target.classList.add("is-invalid");
+            Swal.fire({
+                title: 'Error',
+                text: 'Ingresa una contraseña válida.',
+                icon: 'warning',
+                confirmButtonText: 'continuar',
+                confirmButtonColor: 'black'
+            });
 
         }
 
@@ -171,6 +199,13 @@ function validacionFormContrasena2(c2) {
 
             c2.target.classList.remove("is-valid");
             c2.target.classList.add("is-invalid");
+            Swal.fire({
+                title: 'Error',
+                text: 'Ingresa una contraseña válida y asegúrese que coincida con la primera contraseña ingresada.',
+                icon: 'warning',
+                confirmButtonText: 'continuar',
+                confirmButtonColor: 'black'
+            });
 
         }
 
@@ -211,8 +246,8 @@ function enviar_formulario(f) {
         // mensaje que dice que la informacion de registro tiene errores
         Swal.fire({
             title: 'Error',
-            text: 'La información de registro contiene errores o las contraseñas con coinciden',
-            icon: 'Danger',
+            text: 'La información de registro contiene errores o las contraseñas con coinciden.',
+            icon: 'warning',
             confirmButtonText: 'Continuar',
             confirmButtonColor: 'black'
         });
@@ -234,7 +269,7 @@ function enviar_formulario(f) {
         // mensaje que dice que el registro se hizo correctamente correctamente 
         Swal.fire({
             icon: 'success', 
-            title: 'Registro exitoso',
+            title: 'Registro exitoso.',
             confirmButtonText: 'Continuar',
             confirmButtonColor: 'black' 
         }).then((result)=>{
