@@ -8,8 +8,9 @@ html
 .title-card
 {
     font-weight: 800;
-    font-size: 10vw;
-    margin-top: 10%;
+    font-size: 5vw;
+    margin-top: 3%;
+    margin-bottom:70%;
     margin-left: 5vw;
 
 }
@@ -30,7 +31,11 @@ html
     margin-left: 5vw;
 
 }
+.fondo-foto{
+    background: rgb(245,109,144);
+background: linear-gradient(196deg, rgba(245,109,144,1) 0%, rgba(93,154,200,1) 50%);
 
+}
 
 /*
    ============> Sombra del jumbotron
@@ -153,6 +158,27 @@ html
     .btn-section
     {
         text-align: left;
+    }
+    .cards-alpha
+    {
+        max-height: 23rem;
+        min-height: 23rem;
+        font-size: 12px;
+        border-style: none;
+        border-radius: 11px;
+        background: #ffffff;
+        box-shadow:  
+            17px 17px 34px #cfcfcf,
+            -17px -17px 34px #ffffff;
+    }
+    .title-card
+    {
+        font-weight: 800;
+        font-size: 5vw;
+        margin-top: 3%;
+        margin-bottom: 20%;
+        margin-left: 5vw;
+
     }
 }
 

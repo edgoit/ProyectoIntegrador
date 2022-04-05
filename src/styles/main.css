@@ -1,6 +1,6 @@
 :root
 {
-    --myfont: 'Montserrat', sans-serif;
+    --myfont: 'Libre Baskerville', serif;
     --myweight : 800; 
 }
 
@@ -11,8 +11,7 @@ html
 
 body
 {
-    font-family: 'Poppins', sans-serif;
-    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Libre Baskerville', serif;
 }
 
 /*==========================NAVBAR STYLES==========================*/
