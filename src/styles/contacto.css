@@ -11,6 +11,11 @@ h6{
 .btn:hover{
     background-color: #561A50;
 }
+
+body
+{
+    font-family: 'Libre Baskerville', serif;
+}
 /* Desactivar boton enviar para que se llene el formulario primero*/
 
  /* #enviar{
