@@ -17,8 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;800&display=swap" rel="stylesheet">
     <!-- css-styles -->
     <link rel="stylesheet" href="./src/styles/main.css">
-    <link rel="stylesheet" href="./src/styles/catalogo.css">
-
+    <link rel="stylesheet" href="./src/styles/agregarProducto.css">
 </head>
 
 <body>
@@ -93,107 +92,123 @@
         </nav>
     </section>
 
-    <!--FORMULARIO  -->
-    <section class="container bienvenido text-center py-5">
-        <h2>Bienvenidx Administrador</h2>
-        <form id="formulario" class=" offset-md-2 col-md-10">
-            <div class="form-row">
-
-
-                <!-- Marca-->
-                <div class="form-group col-md-8 text-md-left">
-                    <label for="marca">Marca</label>
-                    <select id="marca" class="custom-select rounded-pill fondo">
-                        <option value="">Selecciona una marca</option>
-                        <option value="Adidas">Adidas</option>
-                        <option value="Nike">Nike</option>
-                        <option value="Pirma">Pirma</option>
-                    </select>
-                    <div class="invalid-feedback"> Debe elegir una opción</div>
-                    <!--Revisar-->
-                </div>
-                <!-- Categoria-->
-                <div class="form-group col-md-8 text-md-left">
-                    <label for="validationTextarea">Categoría</label>
-                    <select id="categoria" class="custom-select rounded-pill fondo">
-                        <option value="">Selecciona una Categoría</option>
-                        <option value="Fútbol-Mujer">Fútbol-Mujer</option>
-                        <option value="Lifestyle-Mujer">Lifestyle-Mujer</option>
-                        <option value="Running-Mujer">Running-Mujer</option>
-                        <option value="Skateboarding-Mujer">Skateboarding-Mujer</option>
-                        <option value="Fútbol-Hombre">Fútbol-Hombre</option>
-                        <option value="Lifestyle-Hombre">Lifestyle-Hombre</option>
-                        <option value="Running-Hombre">Running-Hombre</option>
-                        <option value="Skateboarding-Hombre">Skateboarding-Hombre</option>
-                    </select>
-                    <div class="invalid-feedback"> Debe elegir una opción</div>
-                    <!--Revisar-->
-                </div>
-
-
-                <!--  Nombre-->
-                <div class="form-group col-md-8 text-md-left">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control rounded-pill fondo" id="nombre"
-                        placeholder="Agrega el nombre del producto">
-
-                </div>
-
-                <!--  Descricpion-->
-                <div class="form-group col-md-8 text-md-left">
-                    <label for="descripcion">Descripción</label>
-                    <input type="text" class="form-control rounded-pill fondo" id="descripcion"
-                        placeholder="Descricpción del producto">
-
-                </div>
-
-                <!-- Cantidad-->
-                <div class="form-group col-md-8 text-md-left">
-                    <label for="cantidad">Cantidad</label>
-                    <input type="number" class="form-control rounded-pill fondo " id="cantidad" placeholder="Pares">
-                </div>
-                <!--  Talla-->
-                <div class="form-group col-md-8 text-md-left">
-                    <label for="validationTextarea">Talla</label>
-                    <select id="talla" class="custom-select rounded-pill fondo">
-                        <option value="">Selecciona una talla</option>
-                        <option value="24 CM">24 CM</option>
-                        <option value="24.5 CM">24.5 CM</option>
-                        <option value="25 CM">25 CM</option>
-                        <option value="25.5 CM">25.5 CM</option>
-                        <option value="26 CM">26 CM</option>
-                        <option value="26.5 CM">26.5 CM</option>
-                        <option value="27 CM">27 CM</option>
-                        <option value="27.5 CM">27.5 CM</option>
-                        <option value="28 CM">28 CM</option>
-                        <option value="28.5 CM">28.5 CM</option>
-                        <option value="29 CM">29 CM</option>
-                        <option value="29.5 CM">29.5 CM</option>
-                        <option value="30 CM">30 CM</option>
-                    </select>
-                    <div class="invalid-feedback"> Debe elegir una opción</div>
-                    <!--Revisar-->
-                </div>
-                <!--  Precio-->
-                <div class="form-group col-md-8 text-md-left">
-                    <label for="precio">Precio</label>
-                    <input type="number" class="form-control rounded-pill fondo" id="precio" placeholder="$">
-
-                </div>
-                <div class="form-group">
-                    <input type="file" class="form-control-file" id="img-file">
-                </div>
-
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <!--FORMULARIO  -->
+                <section class="container-fluid text-center">
+                    <h2 class="headers">Bienvenidx Administrador</h2>
+                    <form id="formulario">
+                        <div class="form-row text-left mx-5">
+    
+    
+                            <!-- Marca-->
+                            <div class="form-group col-lg-12 ">
+                                <label for="marca">Marca</label>
+                                <select id="marca" class="custom-select rounded-pill fondo">
+                                    <option value="">Selecciona una marca</option>
+                                    <option value="Adidas">Adidas</option>
+                                    <option value="Nike">Nike</option>
+                                    <option value="Pirma">Pirma</option>
+                                </select>
+                                <div class="invalid-feedback"> Debe elegir una opción</div>
+                                <!--Revisar-->
+                            </div>
+                            <!-- Categoria-->
+                            <div class="form-group col-lg-12">
+                                <label for="validationTextarea">Categoría</label>
+                                <select id="categoria" class="custom-select rounded-pill fondo">
+                                    <option value="">Selecciona una Categoría</option>
+                                    <option value="Fútbol-Mujer">Fútbol-Mujer</option>
+                                    <option value="Lifestyle-Mujer">Lifestyle-Mujer</option>
+                                    <option value="Running-Mujer">Running-Mujer</option>
+                                    <option value="Skateboarding-Mujer">Skateboarding-Mujer</option>
+                                    <option value="Fútbol-Hombre">Fútbol-Hombre</option>
+                                    <option value="Lifestyle-Hombre">Lifestyle-Hombre</option>
+                                    <option value="Running-Hombre">Running-Hombre</option>
+                                    <option value="Skateboarding-Hombre">Skateboarding-Hombre</option>
+                                </select>
+                                <div class="invalid-feedback"> Debe elegir una opción</div>
+                                <!--Revisar-->
+                            </div>
+    
+    
+                            <!--  Nombre-->
+                            <div class="form-group col-lg-12">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control rounded-pill fondo" id="nombre"
+                                    placeholder="Agrega el nombre del producto">
+    
+                            </div>
+    
+                            <!--  Descricpion-->
+                            <div class="form-group col-lg-12">
+                                <label for="descripcion">Descripción</label>
+                                <input type="text" class="form-control rounded-pill fondo" id="descripcion"
+                                    placeholder="Descricpción del producto">
+    
+                            </div>
+    
+                            <!-- Cantidad-->
+                            <div class="form-group col-lg-12">
+                                <label for="cantidad">Cantidad</label>
+                                <input type="number" class="form-control rounded-pill fondo " id="cantidad"
+                                    placeholder="Pares">
+                            </div>
+                            <!--  Talla-->
+                            <div class="form-group col-lg-12">
+                                <label for="validationTextarea">Talla</label>
+                                <select id="talla" class="custom-select rounded-pill fondo">
+                                    <option value="">Selecciona una talla</option>
+                                    <option value="24 CM">24 CM</option>
+                                    <option value="24.5 CM">24.5 CM</option>
+                                    <option value="25 CM">25 CM</option>
+                                    <option value="25.5 CM">25.5 CM</option>
+                                    <option value="26 CM">26 CM</option>
+                                    <option value="26.5 CM">26.5 CM</option>
+                                    <option value="27 CM">27 CM</option>
+                                    <option value="27.5 CM">27.5 CM</option>
+                                    <option value="28 CM">28 CM</option>
+                                    <option value="28.5 CM">28.5 CM</option>
+                                    <option value="29 CM">29 CM</option>
+                                    <option value="29.5 CM">29.5 CM</option>
+                                    <option value="30 CM">30 CM</option>
+                                </select>
+                                <div class="invalid-feedback"> Debe elegir una opción</div>
+                                <!--Revisar-->
+                            </div>
+                            <!--  Precio-->
+                            <div class="form-group col-lg-12">
+                                <label for="precio">Precio</label>
+                                <input type="number" class="form-control rounded-pill fondo" id="precio" placeholder="$">
+    
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-around">
+                            <!-- Preview img -->
+    
+                            <input type="file" class="form-control-file" id="fileImage" style="display:none">
+                            <input type="button" class="btn btn-dark px-5" value="Subir imagen" id="btnFake">
+                            <!-- submit -->
+                            <input type="submit" class="btn btn-dark px-5" value="Agregar">
+                        </div>
+                        <div class="col-4">
+                            <img id="imageFile" name="imageFile" src="" alt="" title="Vista previa de la imagen" />
+                        </div>
+                    </form>
+                    <section class="container mx-5">
+                        <div class="row" id="img-ancla"></div>
+                    </section>
+                </section>
             </div>
-
-            <div>
-                <!-- <button id="spinner" style="display: none;" class="btn btn-dark offset-md-5" type="submit">
-                    Loading...
-                    <span class="spinner-grow spinner-grow-sm" role="status"></span>
-                </button> -->
-                <input type="submit"  class="btn btn-dark col-md-3 offset-md-2 rounded-pill" value="Agregar">
+            <div class="col-lg-6">
+                <section class="container-fluid">
+                    <h1 class="text-center headers">Tus productos</h1>
+                    <div class="row mx-3" id="ancla-preview">
+                    </div>
+                </section>
             </div>
-        </form>
+        </div>
     </section>
 
 
