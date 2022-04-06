@@ -189,24 +189,12 @@ function enviar_formulario(f) {
             confirmButtonColor: 'black'
         });
     } else {
-        // mensaje que dice que el registro se hizo correctamente correctamente 
-
-        Swal.fire({
-            icon: 'success',
-            confirmButtonText: 'Enviar correo',
-            confirmButtonColor: 'black',
-
-        }).then((result) => {
             // Una vez que confirma que los datos son correctos, lo carga en el correo.
-            if (result.isConfirmed) {
                 const nombre1 = document.getElementById('nombre').value;
                 const email1 = document.getElementById('email').value;
                 const telefono1 = document.getElementById('telefono').value;
                 const mensaje1 = document.getElementById('mensaje').value;
                 window.location.href=`mailto:ourclub.alpha@gmail.com?subject=Envío%20desde%20formulario&body=Nombre%3A%20${nombre1}%0ACorreo%3A%20${email1}%0ATel%C3%A9fono%3A%20${telefono1}%0AMensaje%3A%20${mensaje1}`;
-            }
-        });
-
     }
 
 }
