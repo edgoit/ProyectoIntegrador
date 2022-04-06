@@ -1,6 +1,6 @@
 :root
 {
-    --myfont: 'Libre Baskerville', serif;
+    --myfont:'Quicksand', sans-serif;
     --myweight : 800; 
 }
 
@@ -11,7 +11,7 @@ html
 
 body
 {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 /*==========================NAVBAR STYLES==========================*/
