@@ -7,10 +7,17 @@ html
 
 .title-card
 {
+    background-image: url("https://media1.giphy.com/media/SXNJxTL6oGAOmqU8rB/giphy.gif?cid=ecf05e47ikbcnq0i44kzjsy72rds55neujv61izn14adtlpq&rid=giphy.gif");
+	background-size: cover;
+    color: transparent;
+    background-clip: text;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
     font-weight: 800;
     font-size: 5vw;
-    margin-top: 3%;
-    margin-bottom:70%;
+    margin-top: 1vw;
+    margin-bottom:30vw;
     margin-left: 5vw;
 
 }
@@ -19,6 +26,7 @@ html
     font-size: 5vw;
     font-weight: 300;
     margin-left: 5vw;
+
 }
 
 .conocenos
@@ -28,13 +36,14 @@ html
     background-color: #000000;
     border-radius: 3px;
     border-style: none;
-    margin-left: 5vw;
+    margin-left: 42.5vw;
 
 }
 .fondo-foto{
-    background: rgb(245,109,144);
+    background: white;
+   /* background: rgb(245,109,144);
 background: linear-gradient(196deg, rgba(245,109,144,1) 0%, rgba(93,154,200,1) 50%);
-
+*/
 }
 
 /*
@@ -55,8 +64,38 @@ background: linear-gradient(196deg, rgba(245,109,144,1) 0%, rgba(93,154,200,1) 5
     box-shadow:  
         17px 17px 34px #cfcfcf,
         -17px -17px 34px #ffffff;
-    
+        background: #ff6e7fa1;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #bfe9ff, #ff6e7fa1);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #bfe9ff, #ff6e7fa1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
 }
+
+/*animacion de cards*/
+.container:hover .box{
+    transform: scale(1.1);
+}
+.box1{
+    transition: transform 500ms;
+}
+.box2{
+    transition: transform 1s;
+}
+.box3{
+    transition: transform 1.2s;
+}
+.box4{
+    transition: transform 1.3s;
+}
+.box5{
+    transition: transform 1.4s;
+}
+.box6{
+    transition: transform 1.5s;
+}
+.box7{
+    transition: transform 1.6s;
+}
+
 
 /*
    ============> Delimita el tamaño de las imagenes y da bordes
@@ -181,4 +220,3 @@ background: linear-gradient(196deg, rgba(245,109,144,1) 0%, rgba(93,154,200,1) 5
 
     }
 }
-
