@@ -5,22 +5,6 @@ html
     scroll-behavior: smooth;
 }
 
-.title-card
-{
-    background-image: url("https://media1.giphy.com/media/SXNJxTL6oGAOmqU8rB/giphy.gif?cid=ecf05e47ikbcnq0i44kzjsy72rds55neujv61izn14adtlpq&rid=giphy.gif");
-	background-size: cover;
-    color: transparent;
-    background-clip: text;
-	-moz-background-clip: text;
-	-webkit-background-clip: text;
-	text-transform: uppercase;
-    font-weight: 800;
-    font-size: 5vw;
-    margin-top: 1vw;
-    margin-bottom:30vw;
-    margin-left: 5vw;
-
-}
 .body-card
 {
     font-size: 5vw;

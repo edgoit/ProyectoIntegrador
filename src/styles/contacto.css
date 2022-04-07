@@ -1,39 +1,24 @@
-/*Aplicando estilos al h6*/
-h6{
-    font-size: 0.8rem;
-    text-align: center;
-}
-
-.btn-dark{
-    background-color: #342875;
-}
-
-.btn:hover{
-    background-color: #561A50;
-}
-
-body
+.div-form
 {
-    font-family: 'Quicksand', sans-serif;
+    background-color: white;
+    height: 100%;
 }
-/* Desactivar boton enviar para que se llene el formulario primero*/
 
- /* #enviar{
-    cursor: not-allowed;
-    pointer-events:none;
-    opacity: 0.5;
-}   */
+.div-video
+{
+    height: 788px;
+}
 
-/*Haciendo mas chica la letra para dispositivo movil*/
-@media (max-width: 600px) {
-    h6{
-        font-size: 0.6rem;
-        text-align: center;
-    }
-  }
+video
+{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    transition: 1.5s ease;
+}
 
-  .bordeformulario{
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px 8px #888888;
+.container-form
+{
+    width: 100%;
+    overflow: hidden;
 }
