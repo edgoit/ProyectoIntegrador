@@ -8,6 +8,7 @@
 {
     text-align: center;
     margin: auto 0;
+    color:rgb(92, 91, 91);
 }
 
 .card-catalogo
@@ -25,8 +26,9 @@
     height: 100%;
 }
 
+
 .title {
-	text-align: center;
+    text-align: center;
 	color: #FFF;
 	display: flex;
 	flex-direction: column;
@@ -37,9 +39,10 @@
 	line-height:2
 }
 
-h1 {
+.title h1 {
 	background-image: url("https://media1.giphy.com/media/SXNJxTL6oGAOmqU8rB/giphy.gif?cid=ecf05e47ikbcnq0i44kzjsy72rds55neujv61izn14adtlpq&rid=giphy.gif");
 	background-size: cover;
+    font-size: 10vw;
     color: transparent;
     background-clip: text;
 	-moz-background-clip: text;
@@ -47,8 +50,39 @@ h1 {
 	text-transform: uppercase;
 }
 
-.title h1
+h1
 {
-    font-size: 10vw;
+    color: black;
 }
 
+
+.head-futbol
+{
+    background-image: url("../img/BackgroundsCatalogos/futbolh.jpg");
+    background-size: cover;
+}
+
+.head-lifestyle
+{
+    background-image: url("../img/BackgroundsCatalogos/LifestyleM.jpg");
+    background-size: cover;
+}
+
+.head-running
+{
+    background-image: url("../img/BackgroundsCatalogos/Runningmen.jpg");
+    background-size: cover;
+    object-position: bottom;
+}
+
+.head-skateboarding
+{
+    background-image: url("../img/BackgroundsCatalogos/SkateboardingH.jpg");
+    background-size: cover;
+}
+
+.head-running-m
+{
+    background-image: url("../img/BackgroundsCatalogos/RunningM.jpg");
+    background-size: cover;
+}

@@ -1,0 +1,24 @@
+.div-form
+{
+    background-color: white;
+    height: 100%;
+}
+
+.div-video
+{
+    height: 912px;
+}
+
+video
+{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    transition: 1.5s ease;
+}
+
+.container-form
+{
+    width: 100%;
+    overflow: hidden;
+}
