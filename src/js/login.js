@@ -1,5 +1,5 @@
 //Agregamos Datos desde login.html con ById a login.js
-const formulario = document.getElementById("form-registro-date");
+const formulario = document.getElementById("form-login");
 const btnIngresar = document.querySelector("#ingresar");
 // se crean variables del localStorage
 let usuariosRegistrados = localStorage.getItem("usersData");
@@ -9,55 +9,55 @@ let email2 = document.getElementById("email");
 let contrasena2 = document.getElementById("contrasena");
 let resultado = document.getElementById("resultado");
 
+
+
+//Api endpoint login
+const URL = 'http://localhost:8080/api/login/';
+const data = { "correo": "", "contrasena": "" };
+
 //se agrega la funcion que recorre al arreglo poara iniciar sesion compara al los usuarios guardados
+
+
+
+
+
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
-  ingresar();
+  data.correo = email2.value;
+  data.contrasena = contrasena2.value;
+
+  fetch(URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+    .then(response => response.text())
+    .then(data => {
+      sessionStorage.setItem("usuarioToken", data);
+      Swal.fire({
+        icon: "success",
+        title: "Exito",
+        text: "Nos alegra tenerte devuelta.",
+        confirmButtonText: "Continuar",
+        confirmButtonColor: "black",
+      })
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      Swal.fire({
+        title: "Error",
+        text: "Correo o contraseña incorrectos, trate nuevamente.",
+        icon: "warning",
+        confirmButtonText: "Regresar",
+        confirmButtonColor: "black",
+      });
+    });
 });
 
-function ingresar() {
-  let flag = false;
 
-  for (let i = 0; i < arrayUsuarios.length; i++) {
-    if (arrayUsuarios[i].email == email2.value) {
-      if (arrayUsuarios[i].contrasena == contrasena2.value) {
-        Swal.fire({
-          icon: "success",
-          title: "Exito",
-          text: "Nos alegra tenerte devuelta.",
-          confirmButtonText: "Continuar",
-          confirmButtonColor: "black",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            location = "hombreFutbol.html";
-          }
-        });
-        flag = true;
-        break;
-      } else {
-        Swal.fire({
-          title: "Error",
-          text: "Contraseña incorrecta, trate nuevamente.",
-          icon: "warning",
-          confirmButtonText: "Regresar",
-          confirmButtonColor: "black",
-        });
-        flag = true;
-        break;
-      }
-    }
-  }
-  if (flag == false) {
-    Swal.fire({
-      title: "Error",
-      text: "Correo o contraseña incorrectos, trate nuevamente.",
-      icon: "warning",
-      confirmButtonText: "Regresar",
-      confirmButtonColor: "black",
-    });
-  }
-}
 // expresiones regulares para  validar email y contraseña.
 const er =
   /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
@@ -91,13 +91,13 @@ function validacionFormEmail(e) {
       //mostrarError("El email no es valido");
       e.target.classList.remove("is-valid");
       e.target.classList.add("is-invalid");
-      Swal.fire({
-        title: 'Error',
-        text: 'Escribe un correo electrónico válido. Ejemplo:alpha@gmail.com.',
-        icon: 'warning',
-        confirmButtonText: 'Continuar',
-        confirmButtonColor: 'black'
-    });
+      //   Swal.fire({
+      //     title: 'Error',
+      //     text: 'Escribe un correo electrónico válido. Ejemplo:alpha@gmail.com.',
+      //     icon: 'warning',
+      //     confirmButtonText: 'Continuar',
+      //     confirmButtonColor: 'black'
+      // });
     }
   }
 }
@@ -112,14 +112,18 @@ function validacionFormContraseña(t) {
       //mostrarError
       t.target.classList.remove("is-valid");
       t.target.classList.add("is-invalid");
-      Swal.fire({
-        title: 'Error',
-        text: 'Ingresa una contraseña válida.',
-        icon: 'warning',
-        confirmButtonText: 'continuar',
-        confirmButtonColor: 'black'
-    });
+      //   Swal.fire({
+      //     title: 'Error',
+      //     text: 'Ingresa una contraseña válida.',
+      //     icon: 'warning',
+      //     confirmButtonText: 'continuar',
+      //     confirmButtonColor: 'black'
+      // });
     }
   }
 
 }
+
+
+
+
